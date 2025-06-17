@@ -8,7 +8,9 @@ module.exports = function(eleventyConfig) {
       input: ".",
       output: "_site",
       includes: "_includes",
-      layouts: "_layouts"
+      layouts: "_layouts",
+      data: "_data",
+      pages: "_pages"
     }
   };
 };

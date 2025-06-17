@@ -1,0 +1,50 @@
+/* Estilos de Marca Negocios que Fluyen*/
+body {
+  font-family: 'Open Sans', sans-serif;
+  color: #142D3E;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+header nav a {
+  text-decoration: none;
+  color: #142D3E;
+}
+
+header nav a:hover {
+  color: #2A86AB;
+  border-bottom: 2px solid #3F9A8C;
+}
+
+footer {
+  background: #142D3E;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Estilos básicos */
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+}
+
