@@ -1,35 +1,44 @@
-name: Build and Deploy
+name: Build and Deploy Eleventy to GitHub Pages
 
+# 🚀 Cuándo se ejecuta:
 on:
   push:
-    branches:
-      - main
-  workflow_dispatch:
+    branches: [desarrollo]   # Solo cuando hagas push a la rama de desarrollo
+  workflow_dispatch:         # Y también puedes lanzarlo manualmente
 
+# 🚦 Permisos básicos
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   build-deploy:
     runs-on: ubuntu-latest
 
     steps:
+      # 1️⃣ Clona tu rama de desarrollo
       - uses: actions/checkout@v3
 
-      - name: Setup Node
+      # 2️⃣ Prepara Node.js
+      - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
           node-version: '18'
           cache: 'npm'
 
+      # 3️⃣ Instala dependencias
       - name: Install dependencies
         run: npm ci
 
-      - name: Build
+      # 4️⃣ Compila el sitio
+      - name: Build Eleventy site
         run: npm run build
 
-      - name: Deploy to GitHub Pages
+      # 5️⃣ Publica el contenido de _site en la rama MAIN
+      - name: Deploy to main branch
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./_site
+          publish_branch: main          # 👈 Rama de producción
+          publish_dir: ./_site          # 👈 Carpeta generada por Eleventy
+          keep_files: false             # Opcional: elimina archivos viejos
+          force_orphan: true            # Opcional: fuerza branch limpio
