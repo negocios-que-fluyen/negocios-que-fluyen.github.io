@@ -1,7 +1,7 @@
 module.exports = function(eleventyConfig) {
   // Copia los archivos estáticos directamente a _site
   eleventyConfig.addPassthroughCopy("css");
-  eleventyConfig.addPassthroughCopy("images");
+  eleventyConfig.addPassthroughCopy("assets");
   
   return {
     dir: {
