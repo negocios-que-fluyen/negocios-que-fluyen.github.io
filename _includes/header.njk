@@ -5,12 +5,12 @@
     </a>
     <nav class="main-nav">
       <ul>
-        <li><a href="/" class="active">Inicio</a></li>
-        <li><a href="/sobre-nosotros/">Sobre Nosotros</a></li>
-        <li><a href="/servicios/">Servicios</a></li>
-        <li><a href="/recursos/">Recursos</a></li>
-        <li><a href="/blog">Blog</a></li>
-        <li><a href="/contacto/">Contacto</a></li>
+        <li><a href="/" class="nav-link {% if page.url == '/' %}active{% endif %}">Inicio</a></li>
+        <li><a href="/sobre-nosotros/" class="nav-link {% if page.url == '/sobre-nosotros/' %}active{% endif %}">Sobre Nosotros</a></li>
+        <li><a href="/servicios/" class="nav-link {% if page.url == '/servicios/' %}active{% endif %}">Servicios</a></li>
+        <li><a href="/recursos/" class="nav-link {% if page.url == '/recursos/' %}active{% endif %}">Recursos</a></li>
+        <li><a href="/blog/" class="nav-link {% if page.url == '/blog/' %}active{% endif %}">Blog</a></li>
+        <li><a href="/contacto/" class="nav-link {% if page.url == '/contacto/' %}active{% endif %}">Contacto</a></li>
       </ul>
       <div class="nav-icons">
         <!-- Icono de búsqueda -->
