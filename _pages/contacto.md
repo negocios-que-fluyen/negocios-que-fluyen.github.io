@@ -49,7 +49,6 @@ permalink: /contacto/
 
     function mostrarAlerta(html) {
       mensajeEnvio.innerHTML = html;
-      // Scroll más arriba del mensaje (por ejemplo, 80px extra)
       const y = mensajeEnvio.getBoundingClientRect().top + window.pageYOffset - 80;
       window.scrollTo({ top: y, behavior: 'smooth' });
     }
