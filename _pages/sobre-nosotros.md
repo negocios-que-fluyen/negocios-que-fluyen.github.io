@@ -8,20 +8,20 @@ permalink: /sobre-nosotros/
 
 <h2 class="titulo-h2 centrado">¿Quiénes somos?</h2>
 
-<div class="flex-horizontal" style="align-items: stretch;">
-  <div class="columna centrado" style="display: flex; flex-direction: column; height: 100%; min-height: 260px;">
-    <h3 class="subtitulo" style="margin-bottom: 1.2rem;">Nuestra Misión</h3>
-    <div style="flex: 1; display: flex; align-items: center; justify-content: center;">
-      <p class="texto-cuerpo centrado" style="margin: 0 auto;">
+<div class="flex-igual-altura">
+  <div class="columna centrado">
+    <h3 class="subtitulo">Nuestra Misión</h3>
+    <div class="columna-contenido">
+      <p class="texto-cuerpo centrado">
         “Empoderar a emprendedores y microempresarios con soluciones digitales simples, humanas y alineadas al propósito.”<br>
         Guiamos su transformación digital paso a paso, sembrando orden, claridad y esperanza con cada flujo automatizado.
       </p>
     </div>
   </div>
-  <div class="columna centrado" style="display: flex; flex-direction: column; height: 100%; min-height: 260px;">
-    <h3 class="subtitulo" style="margin-bottom: 1.2rem;">Nuestra Visión</h3>
-    <div style="flex: 1; display: flex; align-items: center; justify-content: center;">
-      <p class="texto-cuerpo centrado" style="margin: 0 auto;">
+  <div class="columna centrado">
+    <h3 class="subtitulo">Nuestra Visión</h3>
+    <div class="columna-contenido">
+      <p class="texto-cuerpo centrado">
         “Ver cientos de pequeños negocios prosperar con propósito, orden y paz.”<br>
         Soñamos con un ecosistema donde la tecnología fortalece —no reemplaza— el corazón de cada emprendimiento.
       </p>

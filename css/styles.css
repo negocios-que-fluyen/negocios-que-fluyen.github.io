@@ -417,6 +417,13 @@ h5 {
   align-items: stretch;
   margin: 2.5rem 0 2rem 0;
 }
+.flex-igual-altura {
+  display: flex;
+  gap: 2.5rem;
+  justify-content: center;
+  align-items: stretch;
+  margin: 2.5rem 0 2rem 0;
+}
 .columna {
   flex: 1 1 0;
   min-width: 240px;
@@ -428,10 +435,21 @@ h5 {
   display: flex;
   flex-direction: column;
   align-items: center;
+  /* Subtítulo arriba, contenido centrado vertical */
+}
+.columna-contenido {
+  flex: 1;
+  display: flex;
+  align-items: center;
   justify-content: center;
+  width: 100%;
 }
 @media (max-width: 900px) {
   .flex-horizontal {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .flex-igual-altura {
     flex-direction: column;
     gap: 1.5rem;
   }
