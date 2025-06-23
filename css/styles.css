@@ -629,6 +629,35 @@ h5 {
   }
 }
 
+/* Estilos para mensajes de éxito y error */
+.alerta-exito {
+  background: #e6f9f0;
+  color: #218c5a;
+  border: 1.5px solid #49AA9C;
+  border-radius: 8px;
+  padding: 1rem 1.2rem;
+  margin-bottom: 1.2rem;
+  text-align: center;
+  font-family: var(--font-montserrat);
+  font-size: 1.1rem;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(64,153,124,0.07);
+}
+
+.alerta-error {
+  background: #ffeaea;
+  color: #b02a2a;
+  border: 1.5px solid #e57373;
+  border-radius: 8px;
+  padding: 1rem 1.2rem;
+  margin-bottom: 1.2rem;
+  text-align: center;
+  font-family: var(--font-montserrat);
+  font-size: 1.1rem;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(224,67,54,0.07);
+}
+
 
 
 
