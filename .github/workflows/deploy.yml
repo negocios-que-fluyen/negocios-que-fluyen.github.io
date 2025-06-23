@@ -1,12 +1,10 @@
 name: Build and Deploy Eleventy to GitHub Pages
 
-# 🚀 Cuándo se ejecuta:
 on:
   push:
-    branches: [desarrollo]   # Solo cuando hagas push a la rama de desarrollo
-  workflow_dispatch:         # Y también puedes lanzarlo manualmente
+    branches: [desarrollo]
+  workflow_dispatch:
 
-# 🚦 Permisos básicos
 permissions:
   contents: write
 
@@ -15,10 +13,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # 1️⃣ Clona tu rama de desarrollo
+      # 1️⃣ Clona la rama desarrollo
       - uses: actions/checkout@v3
 
-      # 2️⃣ Prepara Node.js
+      # 2️⃣ Configura Node.js
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
@@ -33,12 +31,13 @@ jobs:
       - name: Build Eleventy site
         run: npm run build
 
-      # 5️⃣ Publica el contenido de _site en la rama MAIN
+      # 5️⃣ Publica en la rama MAIN
       - name: Deploy to main branch
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_branch: main          # 👈 Rama de producción
-          publish_dir: ./_site          # 👈 Carpeta generada por Eleventy
-          keep_files: false             # Opcional: elimina archivos viejos
-          force_orphan: true            # Opcional: fuerza branch limpio
+          publish_branch: main
+          publish_dir: ./_site
+          keep_files: false
+          force_orphan: true
+          cname: www.negocios-que-fluyen.com
