@@ -4,9 +4,6 @@ title: Contacto
 permalink: /contacto/
 ---
 
-
-<script src="https://www.google.com/recaptcha/api.js" async defer></script>
-
 <br>
 <section id="contacto" class="seccion">
   <h2 class="titulo-h2 centrado">Contáctanos</h2>
@@ -106,3 +103,4 @@ permalink: /contacto/
     });
   });
 </script>
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
