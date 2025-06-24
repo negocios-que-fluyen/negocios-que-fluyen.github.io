@@ -3,24 +3,24 @@ layout: base
 title: Sobre Nosotros
 permalink: /sobre-nosotros/
 ---
-<br>
+<div class="espaciado-vertical"></div>
 <section id="sobre-nosotros" class="seccion">
 
 <h2 class="titulo-h2 centrado">¿Quiénes somos?</h2>
 
-<div class="flex-igual-altura">
-  <div class="columna centrado">
+<div class="flex-horizontal">
+  <div class="columna centrado mision">
     <h3 class="subtitulo">Nuestra Misión</h3>
-    <div class="columna-contenido">
+    <div class="contenido-columna">
       <p class="texto-cuerpo centrado">
         “Empoderar a emprendedores y microempresarios con soluciones digitales simples, humanas y alineadas al propósito.”<br>
         Guiamos su transformación digital paso a paso, sembrando orden, claridad y esperanza con cada flujo automatizado.
       </p>
     </div>
   </div>
-  <div class="columna centrado">
+  <div class="columna centrado vision">
     <h3 class="subtitulo">Nuestra Visión</h3>
-    <div class="columna-contenido">
+    <div class="contenido-columna">
       <p class="texto-cuerpo centrado">
         “Ver cientos de pequeños negocios prosperar con propósito, orden y paz.”<br>
         Soñamos con un ecosistema donde la tecnología fortalece —no reemplaza— el corazón de cada emprendimiento.
@@ -29,8 +29,8 @@ permalink: /sobre-nosotros/
   </div>
 </div>
 
-<br>
-<h2 class="titulo-h2 centrado" style="margin-top:2.5rem;">Nuestros Valores</h2>
+<div class="espaciado-vertical"></div>
+<h2 class="titulo-h2 centrado mt-2-5">Nuestros Valores</h2>
 
 <div class="valores-grid">
   <div class="valor">
@@ -51,8 +51,8 @@ permalink: /sobre-nosotros/
   </div>
 </div>
 
-<br>
-<h2 class="titulo-h2 centrado" style="margin-top:2.5rem;">Nuestro Equipo</h2>
+<div class="espaciado-vertical"></div>
+<h2 class="titulo-h2 centrado mt-2-5">Nuestro Equipo</h2>
 <!-- <div class="centrado">
   <img src="/images/equipo.jpg" alt="Equipo de Negocios que Fluyen en espacio colaborativo" class="imagen-parallax">
 </div>

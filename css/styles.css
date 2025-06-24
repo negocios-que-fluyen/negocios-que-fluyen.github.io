@@ -416,7 +416,21 @@ h5 {
   justify-content: center;
   align-items: stretch;
   margin: 2.5rem 0 2rem 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
+
+@media (max-width: 900px) {
+  .flex-horizontal {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .columna {
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
 .flex-igual-altura {
   display: flex;
   gap: 2.5rem;
@@ -424,6 +438,7 @@ h5 {
   align-items: stretch;
   margin: 2.5rem 0 2rem 0;
 }
+
 .columna {
   flex: 1 1 0;
   min-width: 240px;
@@ -442,8 +457,10 @@ h5 {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
+  height: 100%; /* Mantén height: 100% */
+  align-self: stretch; /* Fuerza igual altura */
 }
+ 
 @media (max-width: 900px) {
   .flex-horizontal {
     flex-direction: column;
@@ -478,6 +495,7 @@ h5 {
   color: var(--color-neutro-oscuro);
   margin-bottom: 1.5rem;
 }
+
 .titulo-h4 {
   font-size: 1.25rem;
   font-family: var(--font-montserrat);
@@ -486,6 +504,7 @@ h5 {
   margin-bottom: 1rem;
   color: var(--color-secundario1);
 }
+
 .valores-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -540,3 +559,202 @@ h5 {
   align-items: flex-start;
   margin-bottom: 0.5rem;
 }
+
+/* Utilidad para espaciado vertical similar a <br> */
+.espaciado-vertical {
+  display: block;
+  height: 2.5rem;
+  width: 100%;
+  content: "";
+}
+
+/* SOBRE NOSOTROS - Ajustes para columnas de misión y visión */
+.mision, .vision {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 260px;
+}
+
+/* CONTACTO - Estilos personalizados */
+.form-contacto {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(42,134,171,0.10);
+  padding: 2.5rem 2rem 2rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+  max-width: 480px;
+  margin: 0 auto;
+  border: 1.5px solid var(--color-secundario2);
+  align-items: stretch;
+}
+
+.form-contacto label {
+  width: 100%;
+  text-align: left;
+}
+
+.form-contacto input[type="text"],
+.form-contacto input[type="tel"],
+.form-contacto input[type="email"],
+.form-contacto textarea {
+  margin: 0 auto;
+  display: block;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: var(--font-opensans);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.form-contacto button[type="submit"] {
+  margin-top: 0.3rem;
+  width: auto;
+  min-width: 140px;
+  align-self: flex-start;
+  background: linear-gradient(90deg, var(--color-primario), var(--color-acento));
+  color: #fff;
+  font-family: var(--font-montserrat);
+  font-size: 1.1rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 8px;
+  padding: 0.9em 0;
+  box-shadow: 0 2px 8px rgba(42,134,171,0.10);
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.form-contacto button[type="submit"]:hover {
+  background: linear-gradient(90deg, var(--color-acento), var(--color-primario));
+  transform: translateY(-2px) scale(1.03);
+}
+
+@media (max-width: 600px) {
+  .form-contacto {
+    padding: 1.2rem 0.5rem 1.2rem 0.5rem;
+    max-width: 98vw;
+  }
+}
+
+/* Botón flotante de WhatsApp */
+.btn-whatsapp {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 9999;
+  background: #25d366;
+  color: #fff;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 16px rgba(37, 211, 102, 0.25);
+  transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+  text-decoration: none;
+}
+.btn-whatsapp:hover {
+  background: #128c7e;
+  transform: scale(1.08) translateY(-2px);
+  box-shadow: 0 8px 24px rgba(18, 140, 126, 0.25);
+}
+.btn-whatsapp svg {
+  width: 32px;
+  height: 32px;
+  display: block;
+}
+@media (max-width: 600px) {
+  .btn-whatsapp {
+    right: 14px;
+    bottom: 14px;
+    width: 50px;
+    height: 50px;
+  }
+  .btn-whatsapp svg {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+/* Estilos para mensajes de éxito y error */
+.alerta-exito {
+  background: #e6f9f0;
+  color: #218c5a;
+  border: 1.5px solid #49AA9C;
+  border-radius: 8px;
+  padding: 1rem 1.2rem;
+  margin-bottom: 1.2rem;
+  text-align: center;
+  font-family: var(--font-montserrat);
+  font-size: 1.1rem;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(64,153,124,0.07);
+}
+
+.alerta-error {
+  background: #ffeaea;
+  color: #b02a2a;
+  border: 1.5px solid #e57373;
+  border-radius: 8px;
+  padding: 1rem 1.2rem;
+  margin-bottom: 1.2rem;
+  text-align: center;
+  font-family: var(--font-montserrat);
+  font-size: 1.1rem;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(224,67,54,0.07);
+}
+
+/* Estilos para el spinner de carga */
+.spinner {
+  animation: spinner-rotate 1s linear infinite;
+  vertical-align: middle;
+}
+@keyframes spinner-rotate {
+  100% { transform: rotate(360deg); }
+}
+.spinner .path {
+  stroke: #fff;
+  stroke-linecap: round;
+  animation: spinner-dash 1.5s ease-in-out infinite;
+}
+@keyframes spinner-dash {
+  0% { stroke-dasharray: 1,150; stroke-dashoffset: 0; }
+  50% { stroke-dasharray: 90,150; stroke-dashoffset: -35; }
+  100% { stroke-dasharray: 90,150; stroke-dashoffset: -124; }
+}
+
+.recaptcha-espaciado {
+  margin-top: -0.5rem;
+  margin-bottom: 0.3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.recaptcha-espaciado .g-recaptcha {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+/* Ajuste para márgenes superiores de títulos de sección */
+.titulo-h2 + .valores-grid,
+.titulo-h2 + h2,
+.titulo-h2 + br {
+  margin-top: 2.5rem !important;
+}
+
+.titulo-h2.mt-2-5 {
+  margin-top: 2.5rem;
+}
+
+
+
+
+
+
