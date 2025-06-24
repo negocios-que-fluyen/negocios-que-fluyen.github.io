@@ -77,6 +77,7 @@ permalink: /contacto/
       btnSpinner.style.display = 'inline-block';
 
       const formData = new FormData(form);
+      formData.delete('g-recaptcha-response');
 
       try {
         const resp = await fetch('https://formsubmit.co/ajax/contacto@negocios-que-fluyen.com', {
