@@ -21,9 +21,7 @@ permalink: /contacto/
     <label for="mensaje">Mensaje o duda:</label>
     <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
 
-    <div class="recaptcha-espaciado">
-      <div class="g-recaptcha" data-sitekey="6LevKWsrAAAAAInZxxTXVYHypVsVhvd2qI93FvGZ"></div>
-    </div>
+    <input type="hidden" name="g-recaptcha-response" id="g-recaptcha-response">
 
     <button type="submit" class="btn-primario">
       <span id="btn-texto">Enviar</span>
@@ -33,6 +31,7 @@ permalink: /contacto/
         </svg>
       </span>
     </button>
+
   </form>
 </section>
 
@@ -50,7 +49,7 @@ permalink: /contacto/
       window.scrollTo({ top: y, behavior: 'smooth' });
     }
 
-    form.addEventListener('submit', async function(e) {
+    form.addEventListener('submit', function(e) {
       e.preventDefault();
       mensajeEnvio.innerHTML = '';
 
@@ -63,44 +62,43 @@ permalink: /contacto/
         return;
       }
 
-      if (typeof grecaptcha !== "undefined" && !grecaptcha.getResponse()) {
-        mostrarAlerta('<div class="alerta-error">Por favor completa el reCAPTCHA.</div>');
-        setTimeout(() => mensajeEnvio.innerHTML = '', 4000);
-        return;
-      }
-
       boton.disabled = true;
       btnTexto.style.display = 'none';
       btnSpinner.style.display = 'inline-block';
 
-      const formData = new FormData(form);
-      formData.delete('g-recaptcha-response');
+        grecaptcha.ready(function () {
+        grecaptcha.execute('6Le2RWwrAAAAAI8A-ZqmmB8ZVagQ8SS8-RL6jM8k', { action: 'submit' }).then(async function (token) {
+        document.getElementById('g-recaptcha-response').value = token;
+        document.getElementById('g-recaptcha-response').remove();
 
-      try {
-        const resp = await fetch('https://formsubmit.co/ajax/contacto@negocios-que-fluyen.com', {
-          method: 'POST',
-          body: formData,
-          headers: { 'Accept': 'application/json' }
+        const formData = new FormData(form);
+
+          
+
+          try {
+            const resp = await fetch('https://formsubmit.co/ajax/contacto@negocios-que-fluyen.com', {
+              method: 'POST',
+              body: formData,
+              headers: { 'Accept': 'application/json' }
+            });
+
+            if (resp.ok) {
+              mostrarAlerta('<div class="alerta-exito">¡Correo enviado con éxito! Te responderemos pronto.</div>');
+              form.reset();
+            } else {
+              mostrarAlerta('<div class="alerta-error">Ocurrió un error al enviar el correo. Intenta de nuevo.</div>');
+            }
+          } catch {
+            mostrarAlerta('<div class="alerta-error">Ocurrió un error al enviar el correo. Intenta de nuevo.</div>');
+          } finally {
+            boton.disabled = false;
+            btnTexto.style.display = 'inline';
+            btnSpinner.style.display = 'none';
+            setTimeout(() => mensajeEnvio.innerHTML = '', 4000);
+          }
         });
-
-        if (resp.ok) {
-          mostrarAlerta('<div class="alerta-exito">¡Correo enviado con éxito! Te responderemos pronto.</div>');
-          form.reset();
-          if (typeof grecaptcha !== "undefined") grecaptcha.reset();
-        } else {
-          mostrarAlerta('<div class="alerta-error">Ocurrió un error al enviar el correo. Intenta de nuevo.</div>');
-        }
-      } catch {
-        mostrarAlerta('<div class="alerta-error">Ocurrió un error al enviar el correo. Intenta de nuevo.</div>');
-      } finally {
-        boton.disabled = false;
-        btnTexto.style.display = 'inline';
-        btnSpinner.style.display = 'none';
-        setTimeout(() => {
-          mensajeEnvio.innerHTML = '';
-        }, 4000);
-      }
+      });
     });
   });
 </script>
-<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<script src="https://www.google.com/recaptcha/api.js?render=6Le2RWwrAAAAAI8A-ZqmmB8ZVagQ8SS8-RL6jM8k"></script>
