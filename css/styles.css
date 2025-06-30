@@ -306,7 +306,7 @@ h5 {
 .hero {
   background: var(--color-neutro-claro);
   text-align: center;
-  padding: 6rem 1rem 4rem;
+  padding: 6rem 1rem 4rem; /* Reducido a 4rem abajo */
   position: relative;
   overflow: hidden;
 }
@@ -324,19 +324,22 @@ h5 {
   pointer-events: none;
 }
 
-.hero-content {
-  max-width: 800px;
+.hero-wrap{
+  max-width: 1200px;
   margin: 0 auto;
+  padding: 0 1rem;
+  margin-bottom: 0rem; /* Espacio entre secciones */
 }
 
-.hero h1 {
+
+.hero-titulo {
   font-family: var(--font-montserrat);
   font-size: clamp(2rem, 5vw, 48px);
   color: var(--color-neutro-oscuro);
   margin-bottom: 20px;
 }
 
-.hero p {
+.hero-texto {
   font-family: var(--font-opensans);
   font-size: 18px;
   line-height: 1.6;
@@ -398,6 +401,202 @@ h5 {
   transform: rotate(180deg);
 }
 
+/* ===== Sección Servicios Home ===== */
+.servicios-home {
+  background-color: #f8f9fa; 
+  padding: 1rem 1rem 4rem; /* Reducido de 3rem a 1rem para acercar a la sección testimonios */
+  scroll-margin-top: 80px;
+}
+
+.services-wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.servicios-home .titulo-seccion {
+  text-align: center;
+  font-family: var(--font-montserrat);
+  font-size: clamp(1.8rem,5vw,42px);
+  font-weight: 700;
+  color: var(--color-neutro-oscuro);
+  margin-bottom: 5rem; /* Espacio entre secciones */
+}
+
+
+.fila-servicios {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.tarjeta-servicio {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 1.5rem 1.2rem; 
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.07);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  height: auto;
+  max-height: none; 
+}
+
+.tarjeta-servicio:hover {
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+  transform: translateY(-5px);
+}
+
+.icono-servicio {
+  width: 4rem;
+  height: 4rem;
+  color: var(--color-primario);
+  background: rgba(42, 134, 171, 0.1);
+  padding: 1rem;
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+.icono-servicio svg {
+  width: 100%;
+  height: 100%;
+}
+
+.tarjeta-servicio:hover .icono-servicio {
+  transform: scale(1.05);
+  background-color: rgba(42, 134, 171, 0.15);
+}
+
+.tarjeta-servicio h3 {
+  font-family: var(--font-montserrat);
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--color-neutro-oscuro);
+  margin-bottom: 1rem;
+}
+
+.tarjeta-servicio p {
+  font-family: var(--font-opensans);
+  font-size: 0.9rem; 
+  line-height: 1.5; 
+  color: #505a66;
+  margin-bottom: 1.2rem; 
+  flex-grow: 1;
+  display: block; 
+  overflow: visible; 
+  -webkit-line-clamp: unset; 
+  -webkit-box-orient: unset;
+}
+
+.btn-secundario {
+  border: 1.5px solid var(--color-primario);
+  border-radius: 8px;
+  padding: 0.75rem 1.5rem;
+  color: var(--color-primario);
+  background-color: transparent;
+  text-decoration: none;
+  font-family: var(--font-montserrat);
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-secundario:hover {
+  background-color: var(--color-primario);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(42, 134, 171, 0.2);
+}
+
+/* Media queries para responsividad */
+@media (max-width: 900px) {
+  .fila-servicios {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .tarjeta-servicio {
+    padding: 2rem 1.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .servicios-home {
+    padding: 3rem 1rem;
+  }
+  
+  .tarjeta-servicio {
+    max-width: 100%;
+  }
+}
+
+/* ===== Carousel multi-item dinámico ===== */
+.testimonial-section {
+  padding: 2rem 1rem;
+}
+
+.swiper-slide {
+  display: flex;
+  align-items: stretch;
+}
+
+.swiper-wrapper {
+  align-items: stretch;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  height: auto !important; /* Permite que las tarjetas se ajusten a su contenido */
+}
+
+/* Estilo de cada tarjeta */
+.card-testimonio {
+  background: #fff;
+  border-radius: 1.25rem;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+  padding: 2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  max-width: 340px;
+  margin: auto;
+}
+
+/* Imagen */
+.card-testimonio .avatar {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid rgba(20, 120, 150, 0.2);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  margin: 0 auto 1rem;
+}
+
+/* Texto */
+.card-testimonio .frase {
+  font-style: italic;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1rem;
+  color: #505a66;
+}
+
+.card-testimonio .autor {
+  margin-top: 1rem;
+  color: var(--color-neutro-oscuro);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
 /* SOBRE NOSOTROS - Estilos personalizados */
 .seccion {
   max-width: 900px;
@@ -407,9 +606,11 @@ h5 {
   border-radius: 18px;
   box-shadow: 0 4px 32px rgba(20,45,62,0.07);
 }
+
 .centrado {
   text-align: center;
 }
+
 .flex-horizontal {
   display: flex;
   gap: 2.5rem;
@@ -450,8 +651,8 @@ h5 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* Subtítulo arriba, contenido centrado vertical */
 }
+
 .columna-contenido {
   flex: 1;
   display: flex;
@@ -475,6 +676,7 @@ h5 {
     width: 100%;
   }
 }
+
 .titulo-h2 {
   font-size: 2.5rem;
   font-family: var(--font-montserrat);
@@ -482,6 +684,7 @@ h5 {
   margin-bottom: 1.5rem;
   color: var(--color-primario);
 }
+
 .subtitulo {
   font-size: 1.5rem;
   font-family: var(--font-montserrat);
@@ -489,6 +692,7 @@ h5 {
   margin-bottom: 0.7rem;
   color: var(--color-acento);
 }
+
 .texto-cuerpo {
   font-size: 1.15rem;
   line-height: 1.7;
@@ -511,6 +715,7 @@ h5 {
   gap: 32px;
   margin: 2rem 0 2.5rem 0;
 }
+
 .valor {
   display: flex;
   flex-direction: column;
@@ -522,10 +727,12 @@ h5 {
   text-align: center;
   transition: transform 0.2s, box-shadow 0.2s;
 }
+
 .valor:hover {
   transform: translateY(-6px) scale(1.03);
   box-shadow: 0 6px 24px rgba(64,153,124,0.13);
 }
+
 .icono {
   width: 38px;
   height: 38px;
@@ -541,6 +748,7 @@ h5 {
   box-shadow: 0 4px 24px rgba(42,134,171,0.13);
   object-fit: cover;
 }
+
 .texto-espiritual {
   font-style: italic;
   color: var(--color-secundario2);
@@ -754,7 +962,5 @@ h5 {
 }
 
 
-
-
-
+/* FIN de la seccion de estilos */
 
