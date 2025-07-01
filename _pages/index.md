@@ -11,8 +11,8 @@ permalink: /
       <p>Optimiza procesos, reduce costos y aumenta la productividad con nuestras soluciones de automatizaci&oacute;n empresarial.</p>
     </div>
     <div class="hero-buttons">
-      <a href="#contacto" class="btn-primario">Solicitar Demo</a>
-      <a href="#servicios" class="btn-icono" aria-label="Ir a Servicios">
+      <a href="/contacto" class="btn-primario">Solicitar Demo</a>
+      <a href="#servicios" class="btn-icono scroll-corto" aria-label="Ir a Servicios">
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
           <path d="M8 3.293l4.854 4.853-.708.707L8 4.707 3.854 8.853l-.708-.707L8 3.293z"/>
         </svg>
@@ -20,7 +20,6 @@ permalink: /
     </div>
   </div>
 </section>
-
 <section id="servicios" class="servicios-home">
   <div class="services-wrap">
     <h2 class="titulo-seccion">Servicios Destacados</h2>
