@@ -4,18 +4,31 @@ title: Contacto
 permalink: /contacto/
 ---
 
-<br>
+<section class="hero hero-contacto">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <h1>&iquest;Listo para el siguiente nivel?</h1>
+    <p>Cu&eacute;ntanos tu proyecto y descubre c&oacute;mo podemos ayudarte a automatizar procesos y multiplicar tu impacto en el Reino.</p>
+    <a href="#contacto" class="flecha-scroll" aria-label="Ir al formulario de contacto">
+      <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="12" y1="5" x2="12" y2="19"></line>
+        <polyline points="19,12 12,19 5,12"></polyline>
+      </svg>
+    </a>
+  </div>
+</section>
+<div class="post-hero-espaciado"></div>
 <section id="contacto" class="seccion">
-  <h2 class="titulo-h2 centrado">Contáctanos</h2>
+  <h2 class="titulo-h2 centrado">Cont&aacute;ctanos</h2>
   <div id="mensaje-envio"></div>
   <form class="form-contacto" id="form-contacto" method="POST">
     <label for="nombre">Nombre completo:</label>
     <input type="text" id="nombre" name="nombre" required minlength="5" maxlength="50">
 
-    <label for="telefono">Teléfono:</label>
+    <label for="telefono">Tel&eacute;fono:</label>
     <input type="tel" id="telefono" name="telefono" pattern="[0-9]{10}" maxlength="10" required>
 
-    <label for="correo">Correo electrónico:</label>
+    <label for="correo">Correo electr&oacute;nico:</label>
     <input type="email" id="correo" name="correo" required>
 
     <label for="mensaje">Mensaje o duda:</label>
@@ -57,7 +70,7 @@ permalink: /contacto/
       const mensaje = form.mensaje.value.trim();
 
       if (nombre.length < 5 || mensaje.length < 10) {
-        mostrarAlerta('<div class="alerta-error">Por favor escribe un nombre y mensaje válidos.</div>');
+        mostrarAlerta('<div class="alerta-error">Por favor escribe un nombre y mensaje v&aacute;lidos.</div>');
         setTimeout(() => mensajeEnvio.innerHTML = '', 4000);
         return;
       }
@@ -83,13 +96,13 @@ permalink: /contacto/
             });
 
             if (resp.ok) {
-              mostrarAlerta('<div class="alerta-exito">¡Correo enviado con éxito! Te responderemos pronto.</div>');
+              mostrarAlerta('<div class="alerta-exito">&iexcl;Correo enviado con &eacute;xito! Te responderemos pronto.</div>');
               form.reset();
             } else {
-              mostrarAlerta('<div class="alerta-error">Ocurrió un error al enviar el correo. Intenta de nuevo.</div>');
+              mostrarAlerta('<div class="alerta-error">Ocurri&oacute; un error al enviar el correo. Intenta de nuevo.</div>');
             }
           } catch {
-            mostrarAlerta('<div class="alerta-error">Ocurrió un error al enviar el correo. Intenta de nuevo.</div>');
+            mostrarAlerta('<div class="alerta-error">Ocurri&oacute; un error al enviar el correo. Intenta de nuevo.</div>');
           } finally {
             boton.disabled = false;
             btnTexto.style.display = 'inline';

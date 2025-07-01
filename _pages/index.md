@@ -4,23 +4,23 @@ title: Inicio
 permalink: /
 ---
 
-<section class="hero">
-  <div class="hero-wrap">
-    <h1 class="hero-titulo">Impulsa tu negocio con automatizaci&oacute;n efectiva</h1>
-    <div class="hero-text">
-      <p>Optimiza procesos, reduce costos y aumenta la productividad con nuestras soluciones de automatizaci&oacute;n empresarial.</p>
-    </div>
+<section class="hero hero-home">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <h1>Automatizaci&oacute;n que transforma vidas y empresas</h1>
+    <p>Descubre c&oacute;mo nuestras soluciones digitales ayudan a emprendedores cristianos a crecer con excelencia y valores s&oacute;lidos.</p>
     <div class="hero-buttons">
-      <a href="#contacto" class="btn-primario">Solicitar Demo</a>
-      <a href="#servicios" class="btn-icono" aria-label="Ir a Servicios">
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
-          <path d="M8 3.293l4.854 4.853-.708.707L8 4.707 3.854 8.853l-.708-.707L8 3.293z"/>
+      <a href="/contacto" class="btn-primario">Solicitar Demo</a>
+      <a href="#servicios" class="flecha-scroll" aria-label="Ver nuestros servicios">
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="12" y1="5" x2="12" y2="19"></line>
+          <polyline points="19,12 12,19 5,12"></polyline>
         </svg>
       </a>
     </div>
   </div>
 </section>
-
+<div class="post-hero-espaciado"></div>
 <section id="servicios" class="servicios-home">
   <div class="services-wrap">
     <h2 class="titulo-seccion">Servicios Destacados</h2>
