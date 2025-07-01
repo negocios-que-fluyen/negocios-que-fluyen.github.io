@@ -5,17 +5,26 @@ permalink: /servicios/
 description: Explora nuestros servicios de automatización personalizada y productos digitales DIY para optimizar tu negocio.
 ---
 
+<section class="hero">
+  <div class="hero-wrap">
+    <h1>Soluciones prácticas que hacen fluir tu negocio</h1>
+     <p class="subtexto centrado">Soluciones prácticas para optimizar tu tiempo y hacer fluir tu negocio.</p>
+  </div>
+    <div class="hero-buttons">
+      <a href="#servicios" class="btn-icono scroll-largo" aria-label="Ir a Servicios">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+          <path d="M8 3.293l4.854 4.853-.708.707L8 4.707 3.854 8.853l-.708-.707L8 3.293z"/>
+        </svg>
+      </a>
+    </div>
+</section>
 <section class="vista-servicios-productos">
   <div class="contenedor">
-    <h2 class="titulo-h2 centrado">Servicios y Productos</h2>
-    <p class="subtexto centrado">Soluciones prácticas para optimizar tu tiempo y hacer fluir tu negocio.</p>
-
-    <!-- Botones Tabs -->
+     <!-- Botones Tabs -->
     <div class="tabs-toggle">
       <button class="tab-btn active" data-tab="servicios">Servicios</button>
       <button class="tab-btn" data-tab="productos">Productos DIY</button>
     </div>
-
     <!-- CONTENIDO: SERVICIOS -->
     <div id="servicios" class="tab-content visible">
       <div class="grid-servicios">
@@ -30,7 +39,7 @@ description: Explora nuestros servicios de automatización personalizada y produ
             <h3>Automatización de Procesos</h3>
             <p>Agendamientos, mensajes y tareas repetitivas gestionadas automáticamente para que ganes tiempo.</p>
           </div>
-          <a href="#detalle-automatizacion" class="btn-outline">Más detalles</a>
+          <button onclick="openModal('modal-automatizacion')" class="btn-outline">Más detalles</button>
         </div>
         <div class="card-servicio">
           <div class="contenido">
@@ -43,7 +52,7 @@ description: Explora nuestros servicios de automatización personalizada y produ
             <h3>Análisis de Datos</h3>
             <p>Transforma tus números en claridad con tableros visuales y simples en Sheets o Notion.</p>
           </div>
-          <a href="#detalle-datos" class="btn-outline">Más detalles</a>
+          <button onclick="openModal('modal-datos')" class="btn-outline">Más detalles</button>
         </div>
         <div class="card-servicio">
           <div class="contenido">
@@ -55,7 +64,7 @@ description: Explora nuestros servicios de automatización personalizada y produ
             <h3>Gestión de Clientes (CRM Básico)</h3>
             <p>Organiza tu base de clientes y automatiza seguimientos en WhatsApp sin complicaciones técnicas.</p>
           </div>
-          <a href="#detalle-automatizacion" class="btn-outline">Más detalles</a>
+          <button onclick="openModal('modal-crm')" class="btn-outline">Más detalles</button>
         </div>
         <div class="card-servicio">
           <div class="contenido">
@@ -67,7 +76,7 @@ description: Explora nuestros servicios de automatización personalizada y produ
             <h3>Marketing Digital con IA</h3>
             <p>Publicaciones y campañas automatizadas con IA, para que tu presencia online fluya sin esfuerzo.</p>
           </div>
-          <a href="#detalle-automatizacion" class="btn-outline">Más detalles</a>
+          <button onclick="openModal('modal-marketing')" class="btn-outline">Más detalles</button>
         </div>      <div class="card-servicio">
           <div class="contenido">
             <div class="icono">
@@ -78,7 +87,7 @@ description: Explora nuestros servicios de automatización personalizada y produ
             <h3>Diagnóstico y Diseño de Soluciones</h3>
             <p>Evaluamos tu situación, identificamos cuellos de botella y diseñamos contigo soluciones simples, útiles y humanas.</p>
           </div>
-          <a href="#detalle-automatizacion" class="btn-outline">Más detalles</a>
+          <button onclick="openModal('modal-diagnostico')" class="btn-outline">Más detalles</button>
         </div>
         <div class="card-servicio">
           <div class="contenido">
@@ -88,9 +97,9 @@ description: Explora nuestros servicios de automatización personalizada y produ
               </svg>
             </div>
             <h3>Capacitación y Soporte Personalizado</h3>
-            <p>Agendamientos, mensajes y tareas repetitivas gestionadas automáticamente para que ganes tiempo.</p>
+            <p>Te enseñamos a usar y mantener tus nuevas herramientas con acompañamiento continuo.</p>
           </div>
-          <a href="#detalle-automatizacion" class="btn-outline">Más detalles</a>
+          <button onclick="openModal('modal-capacitacion')" class="btn-outline">Más detalles</button>
         </div>
       </div>
     </div>
@@ -175,13 +184,19 @@ description: Explora nuestros servicios de automatización personalizada y produ
   </div>
 </section>
 
+{% include "modal-servicios.md" %}
+
 <script>
-  document.querySelectorAll('.tab-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-      document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('visible'));
-      btn.classList.add('active');
-      document.getElementById(btn.dataset.tab).classList.add('visible');
+  // Tabs functionality
+  document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('.tab-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+        document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('visible'));
+        btn.classList.add('active');
+        document.getElementById(btn.dataset.tab).classList.add('visible');
+      });
     });
   });
 </script>
+    
