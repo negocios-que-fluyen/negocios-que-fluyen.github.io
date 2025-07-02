@@ -37,7 +37,10 @@ h1, h2, h3, h4, h5 {
   font-family: 'Montserrat', sans-serif;
 }
 
-/* ...existing code... */
+/* Scroll suave para toda la página */
+html {
+  scroll-behavior: smooth;
+}
 
 header nav ul {
   list-style: none;
@@ -302,15 +305,6 @@ h5 {
   }
 }
 
-/* Hero Section */
-.hero {
-  background: var(--color-neutro-claro);
-  text-align: center;
-  padding: 6rem 1rem 4rem; /* Reducido a 4rem abajo */
-  position: relative;
-  overflow: hidden;
-}
-
 .hero::before {
   content: "";
   position: absolute;
@@ -519,6 +513,7 @@ h5 {
   display: block; 
   overflow: visible; 
   -webkit-line-clamp: unset; 
+  line-clamp: unset;
   -webkit-box-orient: unset;
 }
 
@@ -797,12 +792,59 @@ h5 {
   margin-bottom: 0.5rem;
 }
 
-/* Utilidad para espaciado vertical similar a <br> */
-.espaciado-vertical {
-  display: block;
-  height: 2.5rem;
-  width: 100%;
-  content: "";
+/* Utilidades para espaciado vertical - Reemplazan <br> tags */
+.espaciado-pequeño {
+  margin-top: 1rem; /* Equivale a 1 <br> */
+}
+
+.espaciado-mediano {
+  margin-top: 2rem; /* Equivale a 2 <br> */
+}
+
+.espaciado-grande {
+  margin-top: 3rem; /* Equivale a 3 <br> */
+}
+
+.espaciado-extra-grande {
+  margin-top: 4rem; /* Equivale a 4 <br> */
+}
+
+/* Espaciado específico para secciones */
+.seccion-espaciado {
+  margin-top: 3rem; /* Para separar secciones principales */
+}
+
+/* Espaciado después del hero */
+.post-hero-espaciado {
+  margin-top: 4rem; /* Para contenido después del hero */
+}
+
+/* Clases utilitarias de espaciado para reemplazar <br> */
+.espaciado-pequeño {
+  margin-bottom: 1rem;
+}
+
+.espaciado-mediano {
+  margin-bottom: 2rem;
+}
+
+.espaciado-grande {
+  margin-bottom: 3rem;
+}
+
+.espaciado-extra-grande {
+  margin-bottom: 4rem;
+}
+
+/* Espaciado específico para secciones */
+.seccion-espaciado {
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+}
+
+/* Espaciado entre hero y primera sección */
+.post-hero-espaciado {
+  margin-top: 5rem;
 }
 
 /* SOBRE NOSOTROS - Ajustes para columnas de misión y visión */
@@ -990,6 +1032,306 @@ h5 {
   margin-top: 2.5rem;
 }
 
+/* Hero con imagen de fondo */
+.hero {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  overflow: hidden;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(20, 45, 62, 0.6);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  padding: 2rem;
+  width: 100%;
+}
+
+.hero-content h1 {
+  font-family: var(--font-montserrat);
+  font-size: clamp(2rem, 5vw, 4.5rem);
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  line-height: 1.2;
+}
+
+.hero-content p {
+  font-family: var(--font-opensans);
+  font-size: clamp(1rem, 3vw, 1.4rem);
+  line-height: 1.6;
+  margin-bottom: 2.5rem;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.hero .btn-primario {
+  background: var(--color-primario);
+  color: #fff;
+  padding: 14px 32px;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  text-shadow: none;
+  box-shadow: 0 4px 15px rgba(42, 134, 171, 0.3);
+}
+
+.hero .btn-primario:hover {
+  background: var(--color-acento);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(42, 134, 171, 0.4);
+}
+
+.flecha-scroll {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border: 2px solid white;
+  border-radius: 50%;
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  animation: bounce 2s infinite;
+}
+
+.flecha-scroll:hover {
+  background: white;
+  color: var(--color-neutro-oscuro);
+  transform: translateY(-3px);
+  animation: none;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+/* ===== HEROES - IMÁGENES RESPONSIVAS ===== */
+.hero-home {
+  /* Imagen por defecto (Desktop) */
+  background-image: url('/assets/images/hero-home.png');
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center center;
+}
+
+.hero-home .hero-content {
+  margin-left: 5rem;    
+  margin-top: 10rem;      
+  margin-bottom: 15rem;  
+}
+
+.hero-servicios {
+  background-image: url('/assets/images/hero-services.png');
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-servicios .hero-content {
+  text-align: center;
+  margin-left: 25rem;
+  margin-top: 2rem;      /* Mover hacia abajo */
+  margin-bottom: 5rem;   /* Mover desde abajo */
+}
+
+.hero-contacto {
+  background-image: url('/assets/images/hero-contact.png');
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+}
+
+.hero-contacto .hero-content {
+  text-align: center;
+  margin-left: 30rem;
+  margin-top: 2rem;      
+  margin-bottom: 5rem;   
+}
+
+.hero-sobre-nosotros {
+  background-image: url('/assets/images/hero-about-us.png');
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-sobre-nosotros .hero-content {
+  text-align: center;
+  margin-left: 40rem;
+  margin-top: 3rem;      
+  margin-bottom: 8rem;  
+}
+
+/* Tablet - Otros Heroes */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .hero-home {
+    background-image: url('/assets/images/hero-home-tablet.png');
+    background-position: center top;
+    background-size: cover;
+  }
+  
+  .hero-home .hero-content {
+   margin-left: 15rem;   /* Menos margen en tablet */
+    margin-top: 2rem;      /* Mover hacia abajo */
+  margin-bottom: 5rem;   /* Mover desde abajo */
+  }
+
+  
+  .hero-servicios {
+    background-image: url('/assets/images/hero-services-tablet.png');
+    background-position: center top;
+  }
+  
+  .hero-servicios .hero-content {
+    margin-left: 20rem;
+    margin-top: 12rem;
+  }
+  
+  .hero-contacto {
+    background-image: url('/assets/images/hero-contact-tablet.png');
+    background-position: center top;
+  }
+  
+  .hero-contacto .hero-content {
+    margin-left: 30rem;
+    margin-bottom: 20rem;   /* Mover desde abajo */
+  }
+  
+  .hero-sobre-nosotros {
+    background-image: url('/assets/images/hero-about-us-tablet.png');
+    background-position: center top;
+  }
+  
+  .hero-sobre-nosotros .hero-content {
+    margin-left: 0rem;
+    margin-top: 2rem;      /* Mover hacia abajo */
+    margin-bottom: 25rem;   /* Mover desde abajo */
+  }
+}
+
+/* Móvil - Todos los Heroes */
+@media (max-width: 768px) {
+  .hero-home {
+    background-image: url('/assets/images/hero-home-mobile.png');
+    background-position: center center;
+    background-size: cover;
+    min-height: 70vh;
+  }
+  
+  .hero-home .hero-content {
+    margin-left: 0;       /* Centrado en móvil */
+    margin-top: 0;
+    margin-bottom: 30rem;   /* Mover desde abajo */
+  }
+
+  .hero-servicios {
+    background-image: url('/assets/images/hero-services-mobile.png');
+  }
+  .hero-servicios .hero-content {
+    margin-left: 0;       /* Centrado en móvil */
+    margin-top: 0;
+    margin-bottom: 15rem;   /* Mover desde abajo */
+  }
+  
+  .hero-contacto {
+    background-image: url('/assets/images/hero-contact-us-mobile.png');
+  }
+  .hero-contacto .hero-content {
+    margin-left: 0;       /* Centrado en móvil */
+    margin-top: 0;
+    margin-bottom: 25rem;   /* Mover desde abajo */
+  }
+  
+  .hero-sobre-nosotros {
+    background-image: url('/assets/images/hero-about-us-mobile.png');
+  }
+    .hero-sobre-nosotros .hero-content {
+    margin-left: 0;       /* Centrado en móvil */
+    margin-top: 0;
+    margin-bottom: 25rem;   /* Mover desde abajo */
+  }
+
+  /* Posicionamiento unificado en móviles */
+  .hero-servicios .hero-content,
+  .hero-contacto .hero-content,
+  .hero-sobre-nosotros .hero-content {
+    margin-left: 0;
+    margin-top: 0;
+    text-align: center;
+    padding: 3rem 1.5rem;
+    max-width: 100%;
+  }
+
+  .hero-servicios,
+  .hero-contacto,
+  .hero-sobre-nosotros {
+    background-position: center center;
+    background-size: cover;
+    min-height: 70vh;
+  }
+}
+
+/* FIX: Mejorar posicionamiento de imágenes de fondo para consistencia */
+.hero-home,
+.hero-servicios,
+.hero-contacto,
+.hero-sobre-nosotros {
+  background-position: center center; 
+  background-size: cover; 
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
+}
+
+/* En móviles y tablets, usar scroll para mejor rendimiento */
+@media (max-width: 1024px) {
+  .hero-home,
+  .hero-servicios,
+  .hero-contacto,
+  .hero-sobre-nosotros {
+    background-attachment: scroll;
+    background-position: center top; 
+  }
+}
 /* SECCION SERVICIOS*/
 .grid-servicios {
   display: grid;

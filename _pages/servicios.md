@@ -5,28 +5,29 @@ permalink: /servicios/
 description: Explora nuestros servicios de automatización personalizada y productos digitales DIY para optimizar tu negocio.
 ---
 
-<section class="hero">
-  <div class="hero-wrap">
-    <h1>Soluciones prácticas que hacen fluir tu negocio</h1>
-     <p class="subtexto centrado">Soluciones prácticas para optimizar tu tiempo y hacer fluir tu negocio.</p>
+<section class="hero hero-servicios">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <h1>Herramientas que multiplican tu impacto</h1>
+    <p>Desde automatizaci&oacute;n inteligente hasta estrategias digitales: todo lo que necesitas para llevar tu negocio al siguiente nivel.</p>
+    <a href="#servicios-contenido" class="flecha-scroll" aria-label="Ver nuestros servicios">
+      <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="12" y1="5" x2="12" y2="19"></line>
+        <polyline points="19,12 12,19 5,12"></polyline>
+      </svg>
+    </a>
   </div>
-    <div class="hero-buttons">
-      <a href="#servicios" class="btn-icono scroll-largo" aria-label="Ir a Servicios">
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
-          <path d="M8 3.293l4.854 4.853-.708.707L8 4.707 3.854 8.853l-.708-.707L8 3.293z"/>
-        </svg>
-      </a>
-    </div>
 </section>
+<div class="post-hero-espaciado"></div>
 <section class="vista-servicios-productos">
-  <div class="contenedor">
+  <div  id="servicios-contenido" class="contenedor">
      <!-- Botones Tabs -->
     <div class="tabs-toggle">
       <button class="tab-btn active" data-tab="servicios">Servicios</button>
       <button class="tab-btn" data-tab="productos">Productos DIY</button>
     </div>
     <!-- CONTENIDO: SERVICIOS -->
-    <div id="servicios" class="tab-content visible">
+    <div class="tab-content visible">
       <div class="grid-servicios">
         <div class="card-servicio">
           <div class="contenido">
