@@ -20,14 +20,14 @@ description: Explora nuestros servicios de automatización personalizada y produ
 </section>
 <div class="post-hero-espaciado"></div>
 <section class="vista-servicios-productos">
-  <div class="contenedor">
+  <div  id="servicios-contenido" class="contenedor">
      <!-- Botones Tabs -->
     <div class="tabs-toggle">
       <button class="tab-btn active" data-tab="servicios">Servicios</button>
       <button class="tab-btn" data-tab="productos">Productos DIY</button>
     </div>
     <!-- CONTENIDO: SERVICIOS -->
-    <div id="servicios" class="tab-content visible">
+    <div class="tab-content visible">
       <div class="grid-servicios">
         <div class="card-servicio">
           <div class="contenido">
