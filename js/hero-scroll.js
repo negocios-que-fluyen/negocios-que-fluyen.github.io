@@ -3,10 +3,12 @@ document.addEventListener('DOMContentLoaded', function() {
   const flechaButtons = document.querySelectorAll('.flecha-scroll');
   
   flechaButtons.forEach(button => {
+    const isValidSelector = (selector) => /^#[\w-]+$/.test(selector);
     button.addEventListener('click', function(e) {
       e.preventDefault();
       
       const targetId = this.getAttribute('href');
+      if (!isValidSelector(targetId)) return;
       const targetElement = document.querySelector(targetId);
       
       if (targetElement) {
