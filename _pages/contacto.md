@@ -8,7 +8,7 @@ permalink: /contacto/
   <div class="hero-overlay"></div>
   <div class="hero-content">
     <h1>&iquest;Listo para el siguiente nivel?</h1>
-    <p>Cu&eacute;ntanos tu proyecto y descubre c&oacute;mo podemos ayudarte a automatizar procesos y multiplicar tu impacto en el Reino.</p>
+    <p>Cu&eacute;ntanos tu proyecto y descubre c&oacute;mo podemos ayudarte a automatizar procesos y multiplicar tu impacto en el mercado.</p>
     <a href="#contacto" class="flecha-scroll" aria-label="Ir al formulario de contacto">
       <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
         <line x1="12" y1="5" x2="12" y2="19"></line>
@@ -44,6 +44,10 @@ permalink: /contacto/
         </svg>
       </span>
     </button>
+    
+    <div class="recaptcha-notice">
+      Este sitio está protegido por reCAPTCHA y se aplican la <a href="https://policies.google.com/privacy" target="_blank">Política de privacidad</a> y los <a href="https://policies.google.com/terms" target="_blank">Términos de servicio</a> de Google.
+    </div>
 
   </form>
 </section>

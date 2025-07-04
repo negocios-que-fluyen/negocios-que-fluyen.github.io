@@ -3,7 +3,9 @@
     <a href="/" class="logo">
       <img src="/assets/images/Logo Nombre.png" alt="Negocios que Fluyen Logo" />
     </a>
-    <nav class="main-nav">
+    
+    <!-- Navegación para desktop -->
+    <nav class="main-nav desktop-nav">
       <ul>
         <li><a href="/" class="nav-link {% if page.url == '/' %}active{% endif %}">Inicio</a></li>
         <li><a href="/sobre-nosotros/" class="nav-link {% if page.url == '/sobre-nosotros/' %}active{% endif %}">Sobre Nosotros</a></li>
@@ -12,16 +14,46 @@
         <li><a href="/blog/" class="nav-link {% if page.url == '/blog/' %}active{% endif %}">Blog</a></li> #}
         <li><a href="/contacto/" class="nav-link {% if page.url == '/contacto/' %}active{% endif %}">Contacto</a></li>
       </ul>
-      <div class="nav-icons">
-        <!-- Icono de búsqueda -->
-        <button class="icon-btn" aria-label="Buscar">
-          <svg width="18" height="18" viewBox="0 0 18 18"><circle cx="8" cy="8" r="7" stroke="#fff" stroke-width="2" fill="none"/><line x1="13" y1="13" x2="17" y2="17" stroke="#fff" stroke-width="2"/></svg>
-        </button>
-        <!-- Icono de menú -->
-        <button class="icon-btn" aria-label="Menú">
-          <svg width="22" height="22" viewBox="0 0 22 22"><rect y="4" width="22" height="2" fill="#fff"/><rect y="10" width="22" height="2" fill="#fff"/><rect y="16" width="22" height="2" fill="#fff"/></svg>
-        </button>
-      </div>
     </nav>
+
+    <!-- Iconos para desktop -->
+    <div class="nav-icons desktop-icons">
+      <button class="icon-btn search-btn" aria-label="Buscar">
+        <svg width="18" height="18" viewBox="0 0 18 18"><circle cx="8" cy="8" r="7" stroke="#fff" stroke-width="2" fill="none"/><line x1="13" y1="13" x2="17" y2="17" stroke="#fff" stroke-width="2"/></svg>
+      </button>
+    </div>
+
+    <!-- Botón hamburguesa para móvil -->
+    <button class="hamburger-btn" aria-label="Abrir menú" aria-expanded="false" id="hamburger-btn">
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+    </button>
+
+    <!-- Menú móvil -->
+    <nav class="mobile-nav" id="mobile-nav" aria-hidden="true">
+      <div class="mobile-nav-header">
+        <img src="/assets/images/Logo Nombre.png" alt="Negocios que Fluyen Logo" class="mobile-logo" />
+        <button class="close-btn" aria-label="Cerrar menú" id="close-btn">×</button>
+      </div>
+      
+      <!-- Enlaces de navegación directamente después del header -->
+      <ul class="mobile-nav-links">
+        <li><a href="/" class="mobile-nav-link {% if page.url == '/' %}active{% endif %}" {% if page.url == '/' %}aria-current="page"{% endif %}>Inicio</a></li>
+        <li><a href="/sobre-nosotros/" class="mobile-nav-link {% if page.url == '/sobre-nosotros/' %}active{% endif %}" {% if page.url == '/sobre-nosotros/' %}aria-current="page"{% endif %}>Sobre Nosotros</a></li>
+        <li><a href="/servicios/" class="mobile-nav-link {% if page.url == '/servicios/' %}active{% endif %}" {% if page.url == '/servicios/' %}aria-current="page"{% endif %}>Servicios</a></li>
+        <li><a href="/contacto/" class="mobile-nav-link {% if page.url == '/contacto/' %}active{% endif %}" {% if page.url == '/contacto/' %}aria-current="page"{% endif %}>Contacto</a></li>
+      </ul>
+      
+      <!-- Búsqueda en la parte inferior -->
+  {#     <div class="mobile-nav-footer">
+        <a href="#" class="mobile-search" aria-label="Buscar en el sitio">
+          Buscar
+        </a>
+      </div> #}
+    </nav>
+
+    <!-- Overlay para cerrar menú móvil -->
+    <div class="mobile-overlay" id="mobile-overlay" aria-hidden="true"></div>
   </div>
 </header>
