@@ -8,9 +8,9 @@ permalink: /
   <div class="hero-overlay"></div>
   <div class="hero-content">
     <h1>Automatizaci&oacute;n que transforma vidas y empresas</h1>
-    <p>Descubre c&oacute;mo nuestras soluciones digitales ayudan a emprendedores cristianos a crecer con excelencia y valores s&oacute;lidos.</p>
+    <p>Descubre c&oacute;mo nuestras soluciones digitales ayudan a emprendedores a crecer con excelencia y valores s&oacute;lidos.</p>
     <div class="hero-buttons">
-      <a href="/contacto" class="btn-primario">Solicitar Demo</a>
+      <a href="/contacto#contacto" class="btn-primario">Solicitar Demo</a>
       <a href="#servicios" class="flecha-scroll" aria-label="Ver nuestros servicios">
         <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <line x1="12" y1="5" x2="12" y2="19"></line>
@@ -20,7 +20,7 @@ permalink: /
     </div>
   </div>
 </section>
-<div class="post-hero-espaciado"></div>
+<div class="post-hero-espaciado fondo-blanco"></div>
 <section id="servicios" class="servicios-home">
   <div class="services-wrap">
     <h2 class="titulo-seccion">Servicios Destacados</h2>
@@ -32,7 +32,7 @@ permalink: /
         </svg>
         <h3>Automatizaci&oacute;n</h3>
         <p>Libera tiempo automatizando agendas, recordatorios y cobros sin perder el toque personal de tu negocio.</p>
-        <a href="/servicios#automatizacion" class="btn-secundario">Ver detalles</a>
+        <a href="/servicios#servicios-contenido" class="btn-secundario">Ver detalles</a>
       </div>
       <div class="tarjeta-servicio">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icono-servicio">
@@ -40,7 +40,7 @@ permalink: /
         </svg>
         <h3>CRM B&aacute;sico</h3>
         <p>Centraliza contactos y seguimientos en un solo lugar para crear relaciones duraderas con tus clientes.</p>
-        <a href="/servicios#crm" class="btn-secundario">Ver detalles</a>
+        <a href="/servicios#servicios-contenido" class="btn-secundario">Ver detalles</a>
       </div>
       <div class="tarjeta-servicio">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icono-servicio">
@@ -48,7 +48,7 @@ permalink: /
         </svg>
         <h3>Marketing IA</h3>
         <p>Crea contenidos y campa&ntilde;as con apoyo de inteligencia artificial sin complicaciones t&eacute;cnicas.</p>
-        <a href="/servicios#marketing" class="btn-secundario">Ver detalles</a>
+        <a href="/servicios#servicios-contenido" class="btn-secundario">Ver detalles</a>
       </div>
     </div>
   </div>
@@ -62,7 +62,7 @@ permalink: /
 
         <div class="swiper-slide">
           <div class="card-testimonio">
-            <img class="avatar" src="/assets/images/maria.jpg" alt="foto de Mar&iacute;a Garc&iacute;a">
+            <img class="avatar" src="/assets/images/maria.jpg" alt="foto de maria">
             <p class="frase">“Gracias a la automatizaci&oacute;n, reduje un 50% del tiempo que dedicaba a la facturaci&oacute;n. Ahora tengo m&aacute;s tiempo para atender a mis pacientes con calma.”</p>
             <p class="autor"><strong>Mar&iacute;a Garc&iacute;a</strong><br><small>Emprendedora en Salud</small></p>
           </div>
@@ -70,7 +70,7 @@ permalink: /
 
         <div class="swiper-slide">
           <div class="card-testimonio">
-            <img class="avatar" src="/assets/images/carlos.jpeg" alt="foto de Carlos L&oacute;pez">
+            <img class="avatar" src="/assets/images/carlos.jpeg" alt="foto de carlos">
             <p class="frase">“Mis ventas crecieron un 30% tras implementar los tableros. Nunca imagin&eacute; que los datos me dar&iacute;an tanta claridad.”</p>
             <p class="autor"><strong>Carlos L&oacute;pez</strong><br><small>Due&ntilde;o de Papeler&iacute;a Creativa</small></p>
           </div>
@@ -78,7 +78,7 @@ permalink: /
 
         <div class="swiper-slide">
           <div class="card-testimonio">
-            <img class="avatar" src="/assets/images/ana.jpeg" alt="foto de Ana Mart&iacute;nez">
+            <img class="avatar" src="/assets/images/ana.jpeg" alt="foto de Ana">
             <p class="frase">“El CRM me permiti&oacute; entender mejor a mis clientes. Hoy tengo relaciones m&aacute;s humanas y fieles con ellos.”</p>
             <p class="autor"><strong>Ana Mart&iacute;nez</strong><br><small>Coach Personal</small></p>
           </div>
@@ -86,7 +86,7 @@ permalink: /
 
         <div class="swiper-slide">
           <div class="card-testimonio">
-            <img class="avatar" src="/assets/images/luis.jpeg" alt="foto de Luis Rodr&iacute;guez">
+            <img class="avatar" src="/assets/images/luis.jpeg" alt="foto de luis">
             <p class="frase">“Antes sent&iacute;a que trabajaba para mi negocio. Ahora, con los flujos autom&aacute;ticos, mi negocio trabaja conmigo.”</p>
             <p class="autor"><strong>Luis Rodr&iacute;guez</strong><br><small>Consultor Independiente</small></p>
           </div>
@@ -94,7 +94,7 @@ permalink: /
 
         <div class="swiper-slide">
           <div class="card-testimonio">
-            <img class="avatar" src="/assets/images/jazmin.jpeg" alt="foto de Jazm&iacute;n Torres">
+            <img class="avatar" src="/assets/images/jazmin.jpeg" alt="foto de jazmin">
             <p class="frase">“Gracias al equipo de NqF, aprend&iacute; que automatizar no es volverse fr&iacute;o, es cuidar lo importante: mi familia y mis clientes.”</p>
             <p class="autor"><strong>Jazm&iacute;n Torres</strong><br><small>Artesana de Cosm&eacute;tica Natural</small></p>
           </div>
@@ -102,7 +102,7 @@ permalink: /
 
         <div class="swiper-slide">
           <div class="card-testimonio">
-            <img class="avatar" src="/assets/images/pedro.jpeg" alt="foto de Pedro M&eacute;ndez">
+            <img class="avatar" src="/assets/images/pedro.jpeg" alt="foto de pedro">
             <p class="frase">“Con las herramientas que me dieron, pude lanzar mi producto sin estr&eacute;s. Todo fluye mejor desde entonces.”</p>
             <p class="autor"><strong>Pedro M&eacute;ndez</strong><br><small>Emprendedor Digital</small></p>
           </div>

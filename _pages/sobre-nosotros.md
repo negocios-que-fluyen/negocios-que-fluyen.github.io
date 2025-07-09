@@ -8,7 +8,7 @@ permalink: /sobre-nosotros/
   <div class="hero-overlay"></div>
   <div class="hero-content">
     <h1>M&aacute;s que tecnolog&iacute;a, somos prop&oacute;sito</h1>
-    <p>Conoce nuestra misi&oacute;n de empoderar emprendedores cristianos con soluciones digitales que honran a Dios y transforman comunidades.</p>
+    <p>Impulsamos a pequeños negocios con soluciones digitales humanas, accesibles y con propósito, sembrando orden, esperanza y crecimiento en cada comunidad.</p>
     <a href="#sobre-nosotros" class="flecha-scroll" aria-label="Conocer m&aacute;s sobre nosotros">
       <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
         <line x1="12" y1="5" x2="12" y2="19"></line>
@@ -25,8 +25,7 @@ permalink: /sobre-nosotros/
     <h3 class="subtitulo">Nuestra Misi&oacute;n</h3>
     <div class="contenido-columna">
       <p class="texto-cuerpo centrado">
-        “Empoderar a emprendedores y microempresarios con soluciones digitales simples, humanas y alineadas al propósito.”<br>
-        Guiamos su transformaci&oacute;n digital paso a paso, sembrando orden, claridad y esperanza con cada flujo automatizado.
+        “Empoderar a emprendedores y microempresarios con soluciones digitales simples, humanas y alineadas al propósito.”
       </p>
     </div>
   </div>
@@ -34,8 +33,7 @@ permalink: /sobre-nosotros/
     <h3 class="subtitulo">Nuestra Visi&oacute;n</h3>
     <div class="contenido-columna">
       <p class="texto-cuerpo centrado">
-        “Ver cientos de pequeños negocios prosperar con propósito, orden y paz.”<br>
-        So&ntilde;amos con un ecosistema donde la tecnolog&iacute;a fortalece &mdash;no reemplaza&mdash; el coraz&oacute;n de cada emprendimiento.
+        “Ver cientos de pequeños negocios prosperar con propósito, orden y paz.”
       </p>
     </div>
   </div>

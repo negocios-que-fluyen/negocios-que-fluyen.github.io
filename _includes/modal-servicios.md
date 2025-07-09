@@ -20,7 +20,7 @@
     <div class="modal-cta">
       <h4>¿Listo para automatizar?</h4>
       <p>Agenda una consulta gratuita y descubre qué procesos puedes automatizar hoy mismo.</p>
-      <a href="/contacto" class="modal-btn">Solicitar Consulta Gratuita</a>
+      <a href="/contacto#contacto" class="modal-btn">Solicitar Consulta Gratuita</a>
     </div>
   </div>
 </div>
@@ -46,7 +46,7 @@
     <div class="modal-cta">
       <h4>Ve más claro tu negocio</h4>
       <p>Solicita un análisis gratuito de tus datos actuales.</p>
-      <a href="/contacto" class="modal-btn">Solicitar Análisis Gratuito</a>
+      <a href="/contacto#contacto" class="modal-btn">Solicitar Análisis Gratuito</a>
     </div>
   </div>
 </div>
@@ -72,7 +72,7 @@
     <div class="modal-cta">
       <h4>Organiza tus clientes hoy</h4>
       <p>Implementamos tu CRM en 1 semana. Consulta gratuita incluida.</p>
-      <a href="/contacto" class="modal-btn">Empezar mi CRM</a>
+      <a href="/contacto#contacto" class="modal-btn">Empezar mi CRM</a>
     </div>
   </div>
 </div>
@@ -98,7 +98,7 @@
     <div class="modal-cta">
       <h4>Automatiza tu marketing</h4>
       <p>Empezamos con una estrategia personalizada para tu negocio.</p>
-      <a href="/contacto" class="modal-btn">Solicitar Estrategia</a>
+      <a href="/contacto#contacto" class="modal-btn">Solicitar Estrategia</a>
     </div>
   </div>
 </div>
@@ -124,7 +124,7 @@
     <div class="modal-cta">
       <h4>Descubre tu potencial</h4>
       <p>Diagnóstico gratuito de 30 minutos para evaluar tus oportunidades.</p>
-      <a href="/contacto" class="modal-btn">Agendar Diagnóstico</a>
+      <a href="/contacto#contacto" class="modal-btn">Agendar Diagnóstico</a>
     </div>
   </div>
 </div>
@@ -150,7 +150,7 @@
     <div class="modal-cta">
       <h4>Aprende y domina</h4>
       <p>Incluido en todos nuestros servicios. Soporte garantizado.</p>
-      <a href="/contacto" class="modal-btn">Conocer más</a>
+      <a href="/contacto#contacto" class="modal-btn">Conocer más</a>
     </div>
   </div>
 </div>

@@ -18,16 +18,16 @@ description: Explora nuestros servicios de automatización personalizada y produ
     </a>
   </div>
 </section>
-<div class="post-hero-espaciado"></div>
+<div class="post-hero-espaciado fondo-blanco"></div>
 <section class="vista-servicios-productos">
   <div  id="servicios-contenido" class="contenedor">
      <!-- Botones Tabs -->
-    <div class="tabs-toggle">
-      <button class="tab-btn active" data-tab="servicios">Servicios</button>
-      <button class="tab-btn" data-tab="productos">Productos DIY</button>
+    <div class="tabs-toggle" role="tablist">
+      <button class="tab-btn active" data-tab="servicios" role="tab" aria-controls="servicios" aria-selected="true">Servicios</button>
+      <button class="tab-btn" data-tab="productos" role="tab" aria-controls="productos" aria-selected="false">Productos DIY</button>
     </div>
     <!-- CONTENIDO: SERVICIOS -->
-    <div class="tab-content visible">
+    <div id="servicios" class="tab-content visible" role="tabpanel" aria-labelledby="tab-servicios">
       <div class="grid-servicios">
         <div class="card-servicio">
           <div class="contenido">
@@ -105,8 +105,7 @@ description: Explora nuestros servicios de automatización personalizada y produ
       </div>
     </div>
 
-    <!-- CONTENIDO: PRODUCTOS -->
-    <div id="productos" class="tab-content">
+    <div id="productos" class="tab-content" role="tabpanel" aria-labelledby="tab-productos">
       <div class="grid-servicios">
         <div class="card-servicio card-producto">
           <div class="contenido">
@@ -118,7 +117,7 @@ description: Explora nuestros servicios de automatización personalizada y produ
               <li>Ideal para comenzar sin depender de nadie.</li>
             </ul>
           </div>
-          <a href="/contacto" class="btn-outline">📩 Escríbenos y recibe tu copia</a>
+          <a href="/contacto#contacto" class="btn-outline">📩 Escríbenos y recibe tu copia</a>
         </div>
         <div class="card-servicio card-producto">
           <div class="contenido">
@@ -130,7 +129,7 @@ description: Explora nuestros servicios de automatización personalizada y produ
               <li>Incluye plantillas editables.</li>
             </ul>
           </div>
-          <a href="/contacto" class="btn-outline">📩 Escríbenos y recibe tu copia</a>
+          <a href="/contacto#contacto" class="btn-outline">📩 Escríbenos y recibe tu copia</a>
         </div>
         <div class="card-servicio card-producto">
           <div class="contenido">
@@ -142,7 +141,7 @@ description: Explora nuestros servicios de automatización personalizada y produ
               <li>Enfoque práctico, sin necesidad de apps externas.</li>
             </ul>
           </div>
-          <a href="/contacto" class="btn-outline">📩 Escríbenos y recibe tu copia</a>
+          <a href="/contacto#contacto" class="btn-outline">📩 Escríbenos y recibe tu copia</a>
         </div>
         <div class="card-servicio card-producto">
           <div class="contenido">
@@ -154,7 +153,7 @@ description: Explora nuestros servicios de automatización personalizada y produ
               <li>Pensado para negocios con poco tiempo.</li>
             </ul>
           </div>
-          <a href="/contacto" class="btn-outline">📩 Escríbenos y recibe tu copia</a>
+          <a href="/contacto#contacto" class="btn-outline">📩 Escríbenos y recibe tu copia</a>
         </div>
         <div class="card-servicio card-producto">
           <div class="contenido">
@@ -166,7 +165,7 @@ description: Explora nuestros servicios de automatización personalizada y produ
               <li>Resultados desde el primer día.</li>
             </ul>
           </div>
-          <a href="/contacto" class="btn-outline">📩 Escríbenos y recibe tu copia</a>
+          <a href="/contacto#contacto" class="btn-outline">📩 Escríbenos y recibe tu copia</a>
         </div>
       </div>
     </div>
@@ -179,7 +178,7 @@ description: Explora nuestros servicios de automatización personalizada y produ
         “Implementé el CRM y ahora atiendo sin caos.”<br>
         <span>— Mariana, Consultorio Dental</span>
       </blockquote>
-      <a href="/contacto" class="btn-primary">Solicitar Cotización</a>
+      <a href="/contacto#contacto" class="btn-primary">Solicitar Cotización</a>
     </section>
 
   </div>
@@ -192,12 +191,25 @@ description: Explora nuestros servicios de automatización personalizada y produ
   document.addEventListener('DOMContentLoaded', function() {
     document.querySelectorAll('.tab-btn').forEach(btn => {
       btn.addEventListener('click', () => {
-        document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+        // Remover clase active de todos los botones
+        document.querySelectorAll('.tab-btn').forEach(b => {
+          b.classList.remove('active');
+          b.setAttribute('aria-selected', 'false');
+        });
+        // Ocultar todos los contenidos
         document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('visible'));
+        
+        // Activar el botón clickeado
         btn.classList.add('active');
-        document.getElementById(btn.dataset.tab).classList.add('visible');
+        btn.setAttribute('aria-selected', 'true');
+        
+        // Mostrar el contenido correspondiente
+        const targetId = btn.dataset.tab;
+        const targetContent = document.getElementById(targetId);
+        if (targetContent) {
+          targetContent.classList.add('visible');
+        }
       });
     });
   });
 </script>
-    
