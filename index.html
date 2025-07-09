@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio | Negocios que Fluyen</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/logo.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/logo.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/logo.png">
+    <link rel="manifest" href="/site.webmanifest">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <script src="/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="/css/swiper-bundle.min.css">
+</head>
+<body>
+    <header class="main-header">
+  <div class="header-container">
+    <a href="/" class="logo">
+      <img src="/assets/images/Logo Nombre.png" alt="Negocios que Fluyen Logo" />
+    </a>
+    
+    <!-- Navegación para desktop -->
+    <nav class="main-nav desktop-nav">
+      <ul>
+        <li><a href="/" class="nav-link active">Inicio</a></li>
+        <li><a href="/sobre-nosotros/" class="nav-link ">Sobre Nosotros</a></li>
+        <li><a href="/servicios/" class="nav-link ">Servicios</a></li>
+       
+        <li><a href="/contacto/" class="nav-link ">Contacto</a></li>
+      </ul>
+    </nav>
+
+    <!-- Iconos para desktop -->
+    <div class="nav-icons desktop-icons">
+      <button class="icon-btn search-btn" aria-label="Buscar">
+        <svg width="18" height="18" viewBox="0 0 18 18"><circle cx="8" cy="8" r="7" stroke="#fff" stroke-width="2" fill="none"/><line x1="13" y1="13" x2="17" y2="17" stroke="#fff" stroke-width="2"/></svg>
+      </button>
+    </div>
+
+    <!-- Botón hamburguesa para móvil -->
+    <button class="hamburger-btn" aria-label="Abrir menú" aria-expanded="false" id="hamburger-btn">
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+    </button>
+
+    <!-- Menú móvil -->
+    <nav class="mobile-nav" id="mobile-nav" aria-hidden="true">
+      <div class="mobile-nav-header">
+        <img src="/assets/images/Logo Nombre.png" alt="Negocios que Fluyen Logo" class="mobile-logo" />
+        <button class="close-btn" aria-label="Cerrar menú" id="close-btn">×</button>
+      </div>
+      
+      <!-- Enlaces de navegación directamente después del header -->
+      <ul class="mobile-nav-links">
+        <li><a href="/" class="mobile-nav-link active" aria-current="page">Inicio</a></li>
+        <li><a href="/sobre-nosotros/" class="mobile-nav-link " >Sobre Nosotros</a></li>
+        <li><a href="/servicios/" class="mobile-nav-link " >Servicios</a></li>
+        <li><a href="/contacto/" class="mobile-nav-link " >Contacto</a></li>
+      </ul>
+      
+      <!-- Búsqueda en la parte inferior -->
+  
+    </nav>
+
+    <!-- Overlay para cerrar menú móvil -->
+    <div class="mobile-overlay" id="mobile-overlay" aria-hidden="true"></div>
+  </div>
+</header>
+
+    <main>
+        <section class="hero hero-home">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <h1>Automatizaci&oacute;n que transforma vidas y empresas</h1>
+    <p>Descubre c&oacute;mo nuestras soluciones digitales ayudan a emprendedores a crecer con excelencia y valores s&oacute;lidos.</p>
+    <div class="hero-buttons">
+      <a href="/contacto#contacto" class="btn-primario">Solicitar Demo</a>
+      <a href="#servicios" class="flecha-scroll" aria-label="Ver nuestros servicios">
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="12" y1="5" x2="12" y2="19"></line>
+          <polyline points="19,12 12,19 5,12"></polyline>
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>
+<div class="post-hero-espaciado fondo-blanco"></div>
+<section id="servicios" class="servicios-home">
+  <div class="services-wrap">
+    <h2 class="titulo-seccion">Servicios Destacados</h2>
+    <div class="fila-servicios">
+      <div class="tarjeta-servicio">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icono-servicio">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.645.87.074.04.147.083.22.127.325.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 0 1 1.37.49l1.296 2.247a1.125 1.125 0 0 1-.26 1.431l-1.003.827c-.293.241-.438.613-.43.992a7.723 7.723 0 0 1 0 .255c-.008.378.137.75.43.991l1.004.827c.424.35.534.955.26 1.43l-1.298 2.247a1.125 1.125 0 0 1-1.369.491l-1.217-.456c-.355-.133-.75-.072-1.076.124a6.47 6.47 0 0 1-.22.128c-.331.183-.581.495-.644.869l-.213 1.281c-.09.543-.56.94-1.11.94h-2.594c-.55 0-1.019-.398-1.11-.94l-.213-1.281c-.062-.374-.312-.686-.644-.87a6.52 6.52 0 0 1-.22-.127c-.325-.196-.72-.257-1.076-.124l-1.217.456a1.125 1.125 0 0 1-1.369-.49l-1.297-2.247a1.125 1.125 0 0 1 .26-1.431l1.004-.827c.292-.24.437-.613.43-.991a6.932 6.932 0 0 1 0-.255c.007-.38-.138-.751-.43-.992l-1.004-.827a1.125 1.125 0 0 1-.26-1.43l1.297-2.247a1.125 1.125 0 0 1 1.37-.491l1.216.456c.356.133.751.072 1.076-.124.072-.044.146-.086.22-.128.332-.183.582-.495.644-.869l.214-1.28Z" />
+          <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+        </svg>
+        <h3>Automatizaci&oacute;n</h3>
+        <p>Libera tiempo automatizando agendas, recordatorios y cobros sin perder el toque personal de tu negocio.</p>
+        <a href="/servicios#servicios-contenido" class="btn-secundario">Ver detalles</a>
+      </div>
+      <div class="tarjeta-servicio">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icono-servicio">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M8.625 12a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H8.25m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H12m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 0 1-2.555-.337A5.972 5.972 0 0 1 5.41 20.97a5.969 5.969 0 0 1-.474-.065 4.48 4.48 0 0 0 .978-2.025c.09-.457-.133-.901-.467-1.226C3.93 16.178 3 14.189 3 12c0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25Z" />
+        </svg>
+        <h3>CRM B&aacute;sico</h3>
+        <p>Centraliza contactos y seguimientos en un solo lugar para crear relaciones duraderas con tus clientes.</p>
+        <a href="/servicios#servicios-contenido" class="btn-secundario">Ver detalles</a>
+      </div>
+      <div class="tarjeta-servicio">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icono-servicio">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M15.042 21.672 13.684 16.6m0 0-2.51 2.225.569-9.47 5.227 7.917-3.286-.672ZM12 2.25V4.5m5.834.166-1.591 1.591M20.25 10.5H18M7.757 14.743l-1.59 1.59M6 10.5H3.75m4.007-4.243-1.59-1.59" />
+        </svg>
+        <h3>Marketing IA</h3>
+        <p>Crea contenidos y campa&ntilde;as con apoyo de inteligencia artificial sin complicaciones t&eacute;cnicas.</p>
+        <a href="/servicios#servicios-contenido" class="btn-secundario">Ver detalles</a>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="testimonial-section py-5">
+  <div class="container">
+<p><div class="swiper testimonial-swiper">
+<div class="swiper-wrapper"></p>
+<p><div class="swiper-slide">
+<div class="card-testimonio">
+<img class="avatar" src="/assets/images/maria.jpg" alt="foto de maria">
+<p class="frase">“Gracias a la automatización, reduje un 50% del tiempo que dedicaba a la facturación. Ahora tengo más tiempo para atender a mis pacientes con calma.”</p>
+<p class="autor"><strong>María García</strong><br><small>Emprendedora en Salud</small></p>
+</div>
+</div></p>
+<p><div class="swiper-slide">
+<div class="card-testimonio">
+<img class="avatar" src="/assets/images/carlos.jpeg" alt="foto de carlos">
+<p class="frase">“Mis ventas crecieron un 30% tras implementar los tableros. Nunca imaginé que los datos me darían tanta claridad.”</p>
+<p class="autor"><strong>Carlos López</strong><br><small>Dueño de Papelería Creativa</small></p>
+</div>
+</div></p>
+<p><div class="swiper-slide">
+<div class="card-testimonio">
+<img class="avatar" src="/assets/images/ana.jpeg" alt="foto de Ana">
+<p class="frase">“El CRM me permitió entender mejor a mis clientes. Hoy tengo relaciones más humanas y fieles con ellos.”</p>
+<p class="autor"><strong>Ana Martínez</strong><br><small>Coach Personal</small></p>
+</div>
+</div></p>
+<p><div class="swiper-slide">
+<div class="card-testimonio">
+<img class="avatar" src="/assets/images/luis.jpeg" alt="foto de luis">
+<p class="frase">“Antes sentía que trabajaba para mi negocio. Ahora, con los flujos automáticos, mi negocio trabaja conmigo.”</p>
+<p class="autor"><strong>Luis Rodríguez</strong><br><small>Consultor Independiente</small></p>
+</div>
+</div></p>
+<p><div class="swiper-slide">
+<div class="card-testimonio">
+<img class="avatar" src="/assets/images/jazmin.jpeg" alt="foto de jazmin">
+<p class="frase">“Gracias al equipo de NqF, aprendí que automatizar no es volverse frío, es cuidar lo importante: mi familia y mis clientes.”</p>
+<p class="autor"><strong>Jazmín Torres</strong><br><small>Artesana de Cosmética Natural</small></p>
+</div>
+</div></p>
+<p><div class="swiper-slide">
+<div class="card-testimonio">
+<img class="avatar" src="/assets/images/pedro.jpeg" alt="foto de pedro">
+<p class="frase">“Con las herramientas que me dieron, pude lanzar mi producto sin estrés. Todo fluye mejor desde entonces.”</p>
+<p class="autor"><strong>Pedro Méndez</strong><br><small>Emprendedor Digital</small></p>
+</div>
+</div></p>
+<p></div></p>
+  </div>
+</section>
+
+        
+    </main>
+    <footer class="site-footer">
+  <div class="footer-grid">
+
+    <!-- Columna Izquierda -->
+    <div class="footer-left">
+      
+      <p class="footer-cta">
+        S&iacute;guenos y s&eacute; parte de la comunidad que hace que los negocios fluyan con prop&oacute;sito.
+      </p>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/profile.php?id=61577235021894" target="_blank" aria-label="Facebook">
+          <img src="/assets/icons/facebook.svg" alt="Facebook" class="icon">
+        </a>
+        <a href="https://www.instagram.com/negocios_que_fluyen/" target="_blank" aria-label="Instagram">
+          <img src="/assets/icons/instagram.svg" alt="Instagram" class="icon">
+        </a>
+      </div>
+    </div>
+
+    <!-- Columna Derecha -->
+    <div class="footer-right">
+      <div class="footer-contact">
+        <p>📧 <a href="mailto:contacto@negocios-que-fluyen.com">contacto@negocios-que-fluyen.com</a></p>
+        <p>📄 <a href="/politica-privacidad/">Pol&iacute;tica de Privacidad</a></p>
+      </div>
+      <p class="footer-copy">
+        &copy; 2025 Negocios que Fluyen. Todos los derechos reservados.
+      </p>
+    </div>
+
+  </div>
+</footer>
+
+    
+    <!-- Hub flotante de redes sociales con rotación automática -->
+    <div class="floating-social-hub" id="socialHub">
+      <!-- Overlay para cerrar al hacer clic fuera -->
+      <div class="social-overlay" id="socialOverlay"></div>
+      
+      <!-- Icono principal que rota automáticamente -->
+      <div class="main-social-icon" id="mainSocialIcon" tabindex="0" role="button" aria-label="Redes sociales" aria-expanded="false">
+        <img id="currentIcon" src="/assets/icons/instagram.svg" alt="Redes sociales">
+      </div>
+      
+      <!-- Iconos expandidos en formación "pata de gallo" -->
+      <div class="expanded-icons" id="expandedIcons" role="menu" aria-hidden="true">
+        <a href="https://www.instagram.com/negocios_que_fluyen/" 
+           class="expanded-icon instagram" 
+           target="_blank" 
+           aria-label="Síguenos en Instagram"
+           role="menuitem">
+          <img src="/assets/icons/instagram.svg" alt="Instagram">
+        </a>
+        
+        <a href="https://www.facebook.com/profile.php?id=61577235021894" 
+           class="expanded-icon facebook" 
+           target="_blank" 
+           aria-label="Síguenos en Facebook"
+           role="menuitem">
+          <img src="/assets/icons/facebook.svg" alt="Facebook">
+        </a>
+        
+        <a href="https://wa.me/5213339788350" 
+           class="expanded-icon whatsapp" 
+           target="_blank" 
+           aria-label="Contáctanos por WhatsApp"
+           role="menuitem">
+          <img src="/assets/icons/whatsapp.svg" alt="WhatsApp">
+        </a>
+      </div>
+    </div>
+    <script src="/js/swiper-bundle.min.js"></script>
+    <script src="/js/testimonial-swiper.js"></script>
+    <script src="/js/hero-scroll.js"></script>
+    <script src="/js/navbar.js"></script>
+    <script src="/js/floating-social.js"></script>
+</body>
+</html>
