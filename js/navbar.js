@@ -19,6 +19,13 @@ class ResponsiveNavbar {
       return;
     }
 
+    // Accesibilidad: roles semánticos
+    this.mobileNav.setAttribute('role', 'dialog');
+    const mainNav = document.querySelector('.main-nav');
+    if (mainNav) {
+      mainNav.setAttribute('role', 'navigation');
+    }
+
     // Event listeners principales
     this.hamburgerBtn.addEventListener('click', (e) => {
       e.preventDefault();
@@ -416,7 +423,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Manejo de errores global para el navbar
 window.addEventListener('error', (e) => {
-  if (e.filename && e.filename.includes('navbar.js')) {
+  if (e.filename?.includes('navbar.js')) {
     console.error('Error en navbar.js:', e.message);
   }
 });

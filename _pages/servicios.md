@@ -22,12 +22,12 @@ description: Explora nuestros servicios de automatización personalizada y produ
 <section class="vista-servicios-productos">
   <div  id="servicios-contenido" class="contenedor">
      <!-- Botones Tabs -->
-    <div class="tabs-toggle">
-      <button class="tab-btn active" data-tab="servicios">Servicios</button>
-      <button class="tab-btn" data-tab="productos">Productos DIY</button>
+    <div class="tabs-toggle" role="tablist">
+      <button class="tab-btn active" data-tab="servicios" role="tab" aria-controls="servicios" aria-selected="true">Servicios</button>
+      <button class="tab-btn" data-tab="productos" role="tab" aria-controls="productos" aria-selected="false">Productos DIY</button>
     </div>
     <!-- CONTENIDO: SERVICIOS -->
-    <div id="servicios" class="tab-content visible">
+    <div id="servicios" class="tab-content visible" role="tabpanel" aria-labelledby="tab-servicios">
       <div class="grid-servicios">
         <div class="card-servicio">
           <div class="contenido">
@@ -105,7 +105,7 @@ description: Explora nuestros servicios de automatización personalizada y produ
       </div>
     </div>
 
-    <div id="productos" class="tab-content">
+    <div id="productos" class="tab-content" role="tabpanel" aria-labelledby="tab-productos">
       <div class="grid-servicios">
         <div class="card-servicio card-producto">
           <div class="contenido">
@@ -192,12 +192,16 @@ description: Explora nuestros servicios de automatización personalizada y produ
     document.querySelectorAll('.tab-btn').forEach(btn => {
       btn.addEventListener('click', () => {
         // Remover clase active de todos los botones
-        document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+        document.querySelectorAll('.tab-btn').forEach(b => {
+          b.classList.remove('active');
+          b.setAttribute('aria-selected', 'false');
+        });
         // Ocultar todos los contenidos
         document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('visible'));
         
         // Activar el botón clickeado
         btn.classList.add('active');
+        btn.setAttribute('aria-selected', 'true');
         
         // Mostrar el contenido correspondiente
         const targetId = btn.dataset.tab;

@@ -162,11 +162,14 @@ document.addEventListener('DOMContentLoaded', function() {
     expandedIcons.addEventListener('click', function(e) {
         const clickedLink = e.target.closest('a.expanded-icon');
 
-        if (clickedLink && clickedLink.href) {
+        if (clickedLink?.href) {
             // Solo colapsar si no se abre en una nueva pestaña
             if (clickedLink.target !== '_blank') {
                 e.preventDefault();
-                window.location.href = clickedLink.href;
+                // Validar href antes de redireccionar manualmente
+                if (/^https?:\/\//.test(clickedLink.href)) {
+                    window.location.href = clickedLink.href;
+                }
             }
 
             // En ambos casos colapsa el menú después de un breve retraso
@@ -260,5 +263,16 @@ document.addEventListener('DOMContentLoaded', function() {
         window.addEventListener('scroll', fallbackFooterCheck);
         window.addEventListener('resize', fallbackFooterCheck);
         fallbackFooterCheck();
+    }
+
+    // Agregar roles semánticos para accesibilidad
+    if (mainIcon) {
+        mainIcon.setAttribute('role', 'button');
+    }
+    if (expandedIcons) {
+        expandedIcons.setAttribute('role', 'list');
+        expandedIcons.querySelectorAll('.expanded-icon').forEach(function(icon) {
+            icon.setAttribute('role', 'listitem');
+        });
     }
 });
