@@ -90,7 +90,6 @@
       <li>Campañas de email marketing automatizadas</li>
       <li>Respuestas automáticas personalizadas</li>
       <li>Análisis de rendimiento y optimización</li>
-      <li>Creación de funnels de ventas automatizados</li>
     </ul>
     
     <p class="resultado"><strong>Resultado:</strong> Presencia constante en redes sin dedicar horas diarias a crear contenido.</p>

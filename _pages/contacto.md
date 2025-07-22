@@ -100,8 +100,8 @@ permalink: /contacto/
             });
 
             if (resp.ok) {
-              mostrarAlerta('<div class="alerta-exito">&iexcl;Correo enviado con &eacute;xito! Te responderemos pronto.</div>');
-              form.reset();
+              // Redirigir a la página de agradecimiento
+              window.location.href = '/gracias/';
             } else {
               mostrarAlerta('<div class="alerta-error">Ocurri&oacute; un error al enviar el correo. Intenta de nuevo.</div>');
             }
