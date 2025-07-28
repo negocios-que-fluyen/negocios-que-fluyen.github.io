@@ -1,3 +1,6 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400&display=swap');
+
 :root {
   --color-primario: #2A86AB;
   --color-secundario1: #40997C;
@@ -9,9 +12,6 @@
   --font-montserrat: 'Montserrat', Arial, sans-serif;
   --font-opensans: 'Open Sans', Arial, sans-serif;
 }
-
-/* Import Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400&display=swap');
 
 /* Estilos de Marca Negocios que Fluyen*/
 
@@ -2428,12 +2428,18 @@ h5 {
    .hero-content p {
     display: none;
   }
+  .mensaje-inspirador {
+    display: none;
+  }
 }
 @media (max-width: 412px) and (min-height: 916px) {
   :root {
     --mobile-text-zone-y: 22%;  /* Bajar un poco más el texto */
   }
   .hero-content p {
+    display: none;
+  }
+  .mensaje-inspirador {
     display: none;
   }
 }
@@ -2455,6 +2461,9 @@ h5 {
     --mobile-text-zone-y: 20%;  /* Bajar más el texto para evitar que se esconda */
   }
   .hero-content p {
+    display: none;
+  }
+  .mensaje-inspirador {
     display: none;
   }
   .hero-home .hero-content,
@@ -3856,3 +3865,227 @@ body.modal-open {
   box-sizing: border-box;
 }
 
+/* ===== Página de Agradecimiento ===== */
+.hero-gracias {
+  background: linear-gradient(135deg, var(--color-primario) 0%, var(--color-acento) 100%);
+  /* Full viewport height */
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gracias-icono {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 2rem;
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  animation: pulseSuccess 2s ease-in-out infinite;
+}
+
+@keyframes pulseSuccess {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.05); opacity: 0.9; }
+}
+
+.gracias-icono svg {
+  color: white;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+}
+.gracias-acciones {
+  padding: 4rem 0;
+  background: var(--color-neutro-claro);
+}
+
+.gracias-acciones .contenedor {
+  max-width: none !important;
+  width: 100%;
+}
+
+.acciones-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 2rem;
+  width: 100%;
+  max-width: 1200px;
+  margin: 3rem auto;
+  padding: 0 1rem;
+  align-items: stretch;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.acciones-grid > p {
+  display: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+
+.accion-card {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid rgba(42, 134, 171, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+   min-width: 0;
+  flex: 1 1 auto;
+}
+
+.accion-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.accion-icono {
+  background: linear-gradient(135deg, var(--color-primario), var(--color-acento));
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+}
+
+.accion-icono svg {
+  color: white;
+}
+
+.accion-card h3 {
+  color: var(--color-neutro-oscuro);
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+.accion-card p {
+  color: #666;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.btn-secundario {
+  background: transparent;
+  color: var(--color-primario);
+  border: 2px solid var(--color-primario);
+  padding: 10px 24px;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.btn-secundario:hover {
+  background: var(--color-primario);
+  color: white;
+  transform: translateY(-2px);
+}
+
+.redes-sociales {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.red-social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  background: var(--color-primario);
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.red-social:hover {
+  background: var(--color-acento);
+  transform: translateY(-3px);
+  box-shadow: 0 4px 15px rgba(42, 134, 171, 0.3);
+}
+
+.volver-inicio {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.volver-inicio .btn-primario {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 28px;
+  font-size: 1.1rem;
+}
+
+.volver-inicio .btn-primario svg {
+  transition: transform 0.3s ease;
+}
+
+.volver-inicio .btn-primario:hover svg {
+  transform: scale(1.1);
+}
+
+/* Responsive para página de agradecimiento */
+@media (max-width: 768px) {
+  .gracias-icono {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .gracias-icono svg {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .mensaje-inspirador {
+    padding: 1rem;
+    margin-top: 1.5rem;
+  }
+  
+  .mensaje-inspirador p {
+    font-size: 1rem;
+  }
+}
+
+/* Media query para tablet */
+@media (max-width: 992px) {
+  .acciones-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+  
+  .accion-card {
+    padding: 1.5rem;
+  }
+}
+
+/* Media query para mobile */
+@media (max-width: 767px) {
+  .acciones-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 0 1rem;
+  }
+  
+  .accion-card {
+    padding: 1.5rem;
+  }
+}
+
+/* fin de estilo */

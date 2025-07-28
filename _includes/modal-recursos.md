@@ -1,4 +1,3 @@
-<!-- MODALES PARA RECURSOS -->
 <div id="modal-google-business" class="modal">
   <div class="modal-content">
     <button class="modal-close" onclick="closeModal('modal-google-business')" aria-label="Cerrar modal">&times;</button>

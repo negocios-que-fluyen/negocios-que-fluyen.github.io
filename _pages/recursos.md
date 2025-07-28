@@ -174,9 +174,7 @@ permalink: /recursos/
               <button class="btn-mobile-bootstrap" onclick="openModal('modal-organizar-informacion')">Más
                 detalles</button>
             </div>
-
-          </div><!-- Sin conector en el último paso -->
-
+          </div>
         </div>
       </div>
     </div>

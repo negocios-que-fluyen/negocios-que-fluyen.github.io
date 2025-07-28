@@ -46,7 +46,7 @@ permalink: /contacto/
     </button>
     
     <div class="recaptcha-notice">
-      Este sitio está protegido por reCAPTCHA y se aplican la <a href="https://policies.google.com/privacy" target="_blank">Política de privacidad</a> y los <a href="https://policies.google.com/terms" target="_blank">Términos de servicio</a> de Google.
+      Este sitio está protegido por reCAPTCHA y se aplica la <a href="https://policies.google.com/privacy" target="_blank">Política de privacidad</a> y los <a href="https://policies.google.com/terms" target="_blank">Términos de servicio</a> de Google.
     </div>
 
   </form>
@@ -100,7 +100,7 @@ permalink: /contacto/
             });
 
             if (resp.ok) {
-              mostrarAlerta('<div class="alerta-exito">&iexcl;Correo enviado con &eacute;xito! Te responderemos pronto.</div>');
+              window.location.href = '/gracias/';
               form.reset();
             } else {
               mostrarAlerta('<div class="alerta-error">Ocurri&oacute; un error al enviar el correo. Intenta de nuevo.</div>');
