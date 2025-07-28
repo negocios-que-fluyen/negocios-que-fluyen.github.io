@@ -15,7 +15,6 @@ class ResponsiveNavbar {
 
   init() {
     if (!this.hamburgerBtn || !this.closeBtn || !this.mobileNav || !this.mobileOverlay) {
-      console.error('❌ Elementos del menú móvil no encontrados en el DOM');
       return;
     }
 
@@ -42,7 +41,6 @@ class ResponsiveNavbar {
     this.mobileOverlay.addEventListener('click', (e) => {
       e.preventDefault();
       e.stopPropagation();
-      console.log('🎯 Click detectado en overlay, cerrando menú...');
       this.closeMenu();
     });
 
@@ -88,7 +86,6 @@ class ResponsiveNavbar {
   }
 
   openMenu() {
-    console.log('📂 Abriendo menú móvil...');
     this.isOpen = true;
     
     // Agregar clases activas con animación
@@ -103,13 +100,6 @@ class ResponsiveNavbar {
     this.mobileNav?.setAttribute('aria-hidden', 'false');
     this.mobileOverlay?.setAttribute('aria-hidden', 'false');
     
-    // Verificar que el overlay esté visible y interactivo
-    console.log('🔍 Estado del overlay:', {
-      hasActiveClass: this.mobileOverlay?.classList.contains('active'),
-      computedStyle: window.getComputedStyle(this.mobileOverlay).getPropertyValue('pointer-events'),
-      zIndex: window.getComputedStyle(this.mobileOverlay).getPropertyValue('z-index')
-    });
-    
     // Focus en el primer enlace del menú después de la animación
     setTimeout(() => {
       const firstLink = this.mobileNav?.querySelector('.mobile-nav-link');
@@ -121,7 +111,6 @@ class ResponsiveNavbar {
   }
 
   closeMenu() {
-    console.log('📁 Cerrando menú móvil...');
     this.isOpen = false;
     
     // Remover clases activas
@@ -262,7 +251,6 @@ class SearchFunctionality {
   handleSearch() {
     // Aquí puedes implementar la funcionalidad de búsqueda
     // Por ejemplo: abrir modal de búsqueda, redirigir a página de búsqueda, etc.
-    console.log('Función de búsqueda - Por implementar');
     
     // Ejemplo de implementación futura:
     // this.openSearchModal();
@@ -287,47 +275,19 @@ class SearchFunctionality {
 
 // Inicialización cuando el DOM esté listo
 document.addEventListener('DOMContentLoaded', () => {
-  // Verificar elementos críticos del DOM antes de inicializar
-  const elementsToCheck = {
-    hamburgerBtn: document.getElementById('hamburger-btn'),
-    closeBtn: document.getElementById('close-btn'),
-    mobileNav: document.getElementById('mobile-nav'),
-    mobileOverlay: document.getElementById('mobile-overlay')
-  };
-
-  console.log('🔍 Verificando elementos del DOM:', elementsToCheck);
-
-  // Inicializar navbar responsivo con verificación
+  // Inicializar navbar responsivo
   try {
-    const navbar = new ResponsiveNavbar();
-    
-    // Verificación adicional después de la inicialización
-    setTimeout(() => {
-      const overlay = document.getElementById('mobile-overlay');
-      if (overlay) {
-        console.log('✅ Overlay encontrado y configurado:', {
-          element: overlay,
-          styles: window.getComputedStyle(overlay),
-          hasClickListener: overlay.onclick !== null || overlay.addEventListener
-        });
-      } else {
-        console.error('❌ Overlay no encontrado después de la inicialización');
-      }
-    }, 100);
-    
+    new ResponsiveNavbar();
   } catch (error) {
-    console.error('❌ Error inicializando ResponsiveNavbar:', error);
+    // Error inicializando ResponsiveNavbar
   }
   
   // Inicializar funcionalidad de búsqueda
   try {
     new SearchFunctionality();
   } catch (error) {
-    console.error('❌ Error inicializando SearchFunctionality:', error);
+    // Error inicializando SearchFunctionality
   }
-  
-  // Log para debug (remover en producción)
-  console.log('🍔 Navbar responsivo inicializado correctamente');
 });
 
 /**
@@ -418,12 +378,11 @@ class ScrollNavbar {
 // Inicializar el scroll navbar
 document.addEventListener('DOMContentLoaded', () => {
   new ScrollNavbar();
-  console.log('📜 Scroll navbar inicializado correctamente');
 });
 
 // Manejo de errores global para el navbar
 window.addEventListener('error', (e) => {
   if (e.filename?.includes('navbar.js')) {
-    console.error('Error en navbar.js:', e.message);
+    // Error en navbar.js
   }
 });
