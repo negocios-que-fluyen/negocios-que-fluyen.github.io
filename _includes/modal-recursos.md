@@ -1,98 +1,44 @@
-<div id="modal-google-business" class="modal">
+{% for modal in recursos.modales %}
+<!-- Modal: {{ modal.titulo }} -->
+<div id="{{ modal.modal }}" class="modal">
   <div class="modal-content">
-    <button class="modal-close" onclick="closeModal('modal-google-business')" aria-label="Cerrar modal">&times;</button>
-    <h3>Perfil de Google My Business</h3>
-    <p class="modal-subtitle">Configura tu presencia online local y aumenta tu visibilidad en Google.</p>
+    <div class="modal-header">
+      <h3 class="modal-title">{{ modal.titulo }}</h3>
+      <button type="button" class="modal-close" onclick="closeModal('{{ modal.modal }}')" aria-label="Cerrar modal">
+        <span>&times;</span>
+      </button>
+    </div>
     
-    <h4>Beneficios:</h4>
-    <ul>
-      <li>📍 Aparece en búsquedas locales</li>
-      <li>⭐ Gestiona reseñas de clientes</li>
-      <li>📞 Facilita el contacto directo</li>
-      <li>📊 Obtén estadísticas de rendimiento</li>
-    </ul>
-    
-    <p class="resultado"><strong>Resultado:</strong> Mayor visibilidad local y más clientes potenciales encontrándote fácilmente.</p>
-    
-    <div class="modal-cta">
-      <h4>¿Listo para empezar?</h4>
-      <p>Descarga un manual que te guiara en el proceso y comienza a aparecer en las búsquedas locales.</p>
-      <a href="https://drive.google.com/file/d/1aKtlOqF4CvBYuPr95-SjBTMfPhZ9bD0R/view?usp=sharing" target="_blank" class="modal-btn" rel="noopener noreferrer">Descargar manual gratuito</a>
+    <div class="modal-body">
+      <div class="modal-description">
+        <p>{{ modal.descripcion }}</p>
+      </div>
+      
+      <div class="modal-benefits">
+        <h4>Beneficios:</h4>
+        <ul class="benefits-list">
+          {% for beneficio in modal.beneficios %}
+          <li>{{ beneficio }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+      
+      <div class="modal-result">
+        <h4>Resultado:</h4>
+        <p>{{ modal.resultado }}</p>
+      </div>
+      
+      <div class="modal-cta">
+        <h4>{{ modal.cta.titulo }}</h4>
+        <p>{{ modal.cta.descripcion }}</p>
+        <a href="{{ modal.cta.enlace }}" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+          {{ modal.cta.textoBoton }}
+        </a>
+      </div>
     </div>
   </div>
 </div>
-
-<div id="modal-calendly" class="modal">
-  <div class="modal-content">
-    <button class="modal-close" onclick="closeModal('modal-calendly')" aria-label="Cerrar modal">&times;</button>
-    <h3>Página de Calendly</h3>
-    <p class="modal-subtitle">Automatiza la programación de citas y elimina el intercambio de mensajes.</p>
-    
-    <h4>Beneficios:</h4>
-    <ul>
-      <li>🗓️ Reservas automáticas 24/7</li>
-      <li>⏰ Sincroniza con tu calendario</li>
-      <li>📧 Confirmaciones automáticas</li>
-      <li>💰 Reduce tiempo administrativo</li>
-    </ul>
-    
-    <p class="resultado"><strong>Resultado:</strong> Ahorra horas semanales en coordinación de citas y mejora la experiencia del cliente.</p>
-    
-    <div class="modal-cta">
-      <h4>Automatiza tus citas</h4>
-      <p>Descarga un manual y configura tu calendario que permite a los clientes reserven automáticamente.</p>
-      <a href="https://drive.google.com/file/d/1tuaz3dna9U0wbKjWBbiyz5CgvENvtQag/view?usp=sharing" target="_blank" class="modal-btn" rel="noopener noreferrer">Descargar manual</a>
-    </div>
-  </div>
-</div>
-
-<div id="modal-whatsapp-business" class="modal">
-  <div class="modal-content">
-    <button class="modal-close" onclick="closeModal('modal-whatsapp-business')" aria-label="Cerrar modal">&times;</button>
-    <h3>WhatsApp Business</h3>
-    <p class="modal-subtitle">Implementa respuestas automáticas y mejora la atención al cliente.</p>
-    
-    <h4>Beneficios:</h4>
-    <ul>
-      <li>🤖 Respuestas instantáneas</li>
-      <li>📋 Menús interactivos</li>
-      <li>📈 Métricas de conversación</li>
-      <li>👥 Gestión de contactos</li>
-    </ul>
-    
-    <p class="resultado"><strong>Resultado:</strong> Atención al cliente más eficiente y profesional, disponible 24/7.</p>
-    
-    <div class="modal-cta">
-      <h4>Mejora tu atención</h4>
-      <p>Descarga un manual de WhatsApp Business y configura respuestas automáticas.</p>
-      <a href="https://drive.google.com/file/d/1U3fNyi3qe6RHXauLpRMyXJwhatgK7-ll/view?usp=sharing" target="_blank" class="modal-btn" rel="noopener noreferrer">Descargar manual WhatsApp Business</a>
-    </div>
-  </div>
-</div>
-
-<div id="modal-organizar-informacion" class="modal">
-  <div class="modal-content">
-    <button class="modal-close" onclick="closeModal('modal-organizar-informacion')" aria-label="Cerrar modal">&times;</button>
-    <h3>Organizar Información</h3>
-    <p class="modal-subtitle">Centraliza y estructura toda la información de tu negocio.</p>
-    
-    <h4>Beneficios:</h4>
-    <ul>
-      <li>📁 Sistema organizado</li>
-      <li>🔍 Búsqueda rápida</li>
-      <li>📊 Reportes automáticos</li>
-      <li>🔄 Procesos estandarizados</li>
-    </ul>
-    
-    <p class="resultado"><strong>Resultado:</strong> Información accesible, procesos claros y operaciones más eficientes.</p>
-    
-    <div class="modal-cta">
-      <h4>Organiza tu negocio</h4>
-      <p>Explora más recursos y herramientas para optimizar tu información.</p>
-      <a href="/contacto#contacto" class="modal-btn">Solicitar ayuda personalizada</a>
-    </div>
-  </div>
-</div>
+{% endfor %}
 
 <script>
   // Modal functionality with improved animations and scroll management
@@ -102,18 +48,18 @@
     const modal = document.getElementById(modalId);
     if (modal) {
       // Guardar posición actual del scroll
-      savedScrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+      savedScrollPosition = window.scrollY;
       
       // Prevenir scroll del body
       document.body.style.overflow = 'hidden';
       document.body.style.position = 'fixed';
       document.body.style.top = `-${savedScrollPosition}px`;
       document.body.style.width = '100%';
-
+      
       // Mostrar modal
       modal.style.display = 'flex';
       
-      // Forzar reflow para que la animación funcione
+      // Forzar reflow antes de añadir la clase
       modal.offsetHeight;
       
       // Añadir clase show para animación
