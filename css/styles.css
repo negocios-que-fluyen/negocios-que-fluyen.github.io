@@ -2051,16 +2051,6 @@ h5 {
   line-height: 1.2;
 }
 
-/* H2 en hero de gracias con mismo estilo que H1 */
-/* .hero-gracias .hero-content h3 {
-  font-family: var(--font-montserrat);
-  font-size: clamp(2rem, 5vw, 4.5rem);
-  font-weight: 600;
-  margin-bottom: 1.5rem;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-  line-height: 1.2;
-} */
-
 .hero-content p {
   font-family: var(--font-opensans);
   font-size: clamp(1rem, 3vw, 1.4rem);
@@ -2176,9 +2166,9 @@ h5 {
   --hero-sobre-nosotros-text-width-tablet: min(1000px, 100vw);
   
   /* Hero Recursos - Posición en tablet */
-  --hero-recursos-text-x-tablet: 50%;  /* Centro en tablet */
+  --hero-recursos-text-x-tablet: 40%;  /* Centro en tablet */
   --hero-recursos-text-y-tablet: 50%;  /* Centro en tablet */
-  --hero-recursos-text-width-tablet: min(1000px, 70vw);
+  --hero-recursos-text-width-tablet: min(1000px, 50vw);
   
   /* ===== MÓVIL - SISTEMA COHERENTE ===== */
   --hero-home-text-x-mobile: var(--mobile-text-zone-x);
@@ -2243,7 +2233,6 @@ h5 {
   top: var(--hero-home-text-y-desktop);
   max-width: var(--hero-home-text-width-desktop);
   transform: translate(0%, -50%); /* Centra verticalmente desde el punto Y */
- /*  text-align: left; */
 }
 
 .hero-servicios {
@@ -2344,8 +2333,6 @@ h5 {
     left: var(--hero-recursos-text-x-tablet);
     top: var(--hero-recursos-text-y-tablet);
     max-width: var(--hero-recursos-text-width-tablet);
-    transform: translate(-50%, -50%); /* Centro en tablet */
-    text-align: center;
   }
 }
 
@@ -2461,9 +2448,6 @@ h5 {
   :root {
     --mobile-text-zone-y: 22%;  /* Máximo margen para pantallas muy altas (bajado) */
   }
-/*    .hero-content p {
-    display: none;
-  } */
 }
 
 /* MÓVILES ESTRECHOS - Regla especial para pantallas menores a 410px ancho */
@@ -2526,7 +2510,7 @@ h5 {
 /* SECCION SERVICIOS*/
 .grid-servicios {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Exactamente 3 columnas en desktop */
+  grid-template-columns: repeat(3, 1fr); 
   gap: 1.5rem; /* Espacio uniforme entre tarjetas */
   max-width: 1200px;
   margin: 2rem auto;
@@ -2638,7 +2622,6 @@ h5 {
   background-color: white; 
   padding: 1rem 1rem 4rem; /* Reducido de 3rem a 1rem para acercar a la sección testimonios */
   scroll-margin-top: 80px;
-  /* margin-top: 4rem; */
 }
 
 /* === SECCIÓN ESPECIAL PARA VISTA SERVICIOS Y PRODUCTOS === */
@@ -3190,6 +3173,696 @@ h5 {
   .modal-btn {
     border: 2px solid #1976A2;
   }
+}
+
+/* ===== ROADMAP BOOTSTRAP - DISEÑO RESPONSIVO OPTIMIZADO ===== */
+.roadmap-bootstrap {
+   background: var(--color-neutro-claro); 
+  padding: 4rem 0;
+  overflow-x: hidden;
+}
+
+/* ===== TÍTULOS Y HEADER ===== */
+.roadmap-title-bootstrap {
+  font-family: var(--font-montserrat);
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--color-neutro-oscuro);
+  margin-bottom: 1rem;
+}
+
+.roadmap-subtitle-bootstrap {
+  font-size: 1.2rem;
+  color: var(--color-neutro-oscuro);
+  opacity: 0.8;
+  font-weight: 400;
+  margin-bottom: 0;
+}
+
+/* ===== CONTENEDOR DESKTOP - TIMELINE ZIGZAG ===== */
+.roadmap-desktop-timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem; 
+}
+
+/* Línea central del timeline */
+.timeline-line {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: linear-gradient(180deg, #49AA9C 0%, #26A6B0 50%, #49AA9C 100%);
+  transform: translateX(-50%);
+  border-radius: 2px;
+  box-shadow: 0 0 10px rgba(73, 170, 156, 0.3);
+}
+
+/* Pasos del timeline */
+.timeline-step {
+  position: relative;
+  width: 100%;
+  margin-bottom: 1rem; 
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* Paso hacia la derecha */
+.timeline-step-right {
+  justify-content: flex-end;
+  padding-left: 50%;
+}
+
+.timeline-step-right .roadmap-card-bootstrap {
+  margin-left: 1rem; 
+  margin-right: 0;
+}
+
+.timeline-step-right .connector-to-center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 80px;
+}
+
+.timeline-step-left {
+  justify-content: flex-start;
+  padding-right: 50%;
+}
+
+.timeline-step-left .roadmap-card-bootstrap {
+  margin-right: 1rem; 
+  margin-left: 0;
+}
+
+.timeline-step-left .connector-to-center {
+  position: absolute;
+  right: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 80px;
+}
+
+/* ===== CARDS PRINCIPALES (DESKTOP TIMELINE) ===== */
+.roadmap-card-bootstrap {
+  background: white;
+  border-radius: 20px;
+  padding: 1.8rem 1.3rem;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  cursor: pointer;
+  width: 400px; 
+  min-height: 280px; 
+  border: 2px solid transparent;
+  z-index: 10;
+}
+
+.roadmap-card-bootstrap:hover {
+  transform: translateY(-12px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(73, 170, 156, 0.2);
+  border-color: rgba(73, 170, 156, 0.4);
+}
+
+/* ===== CONECTORES SVG ===== */
+.connector-to-center {
+  z-index: 5;
+}
+
+.connector-svg {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.connector-svg path {
+  stroke-dasharray: 100;
+  stroke-dashoffset: 100;
+  animation: drawConnector 1.5s ease forwards;
+  animation-delay: 0.5s;
+  stroke-width: 3; /* Aumentado de 2 a 3 para mejor visibilidad */
+}
+
+.connector-svg circle {
+  opacity: 0;
+  animation: fadeInCircle 0.5s ease forwards;
+  animation-delay: 2s;
+  r: 4; 
+}
+
+@keyframes drawConnector {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes fadeInCircle {
+  to {
+    opacity: 1;
+  }
+}
+
+/* ===== NÚMEROS DE PASO (TIMELINE) ===== */
+.step-number-bootstrap {
+  position: absolute;
+  top: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, #49AA9C, #26A6B0);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-montserrat);
+  font-weight: 700;
+  font-size: 1.3rem;
+  box-shadow: 0 6px 20px rgba(73, 170, 156, 0.4);
+  z-index: 15;
+  border: 4px solid white;
+}
+
+/* ===== RESPONSIVE ADJUSTMENTS ===== */
+@media (max-width: 1024px) {
+  .roadmap-desktop-timeline {
+    padding: 1.5rem 0.5rem;
+  }
+  
+  .roadmap-card-bootstrap {
+    width: 260px;
+    min-height: 260px;
+    padding: 1.5rem 1rem;
+  }
+  
+  .timeline-step-right .roadmap-card-bootstrap {
+    margin-left: 2rem;
+  }
+  
+  .timeline-step-left .roadmap-card-bootstrap {
+    margin-right: 2rem;
+  }
+  
+  .timeline-step {
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .roadmap-desktop-timeline {
+    display: none; /* Se oculta en tablet y mobile, usa el layout móvil */
+  }
+}
+
+/* ===== ÍCONOS PERSONALIZADOS ===== */
+.step-icon-bootstrap {
+  width: 60px;
+  height: 60px;
+  margin: 1.5rem 0 1rem;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  transition: all 0.3s ease;
+}
+
+.roadmap-card-bootstrap:hover .step-icon-bootstrap {
+  transform: scale(1.1);
+}
+
+/* Íconos específicos */
+.google-icon {
+  background-image: url('/assets/icons/icons8-logo-de-google.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 48px; 
+  height: 48px;
+}
+
+.calendar-icon {
+     background-image: url('/assets/icons/google_calendar.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 48px; 
+  height: 48px;
+}
+
+.whatsapp-icon {
+   background-image: url('/assets/icons/icons-whatsapp.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 48px; 
+  height: 48px;
+}
+
+
+.folder-icon {
+   background-image: url('/assets/icons/carpeta.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 48px; 
+  height: 48px;
+}
+
+/* ===== TEXTOS (DESKTOP) ===== */
+.step-title-bootstrap {
+  font-family: var(--font-montserrat);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-neutro-oscuro);
+  margin-bottom: 0.5rem;
+  line-height: 1.3;
+}
+
+.step-subtitle-bootstrap {
+  font-size: 0.8rem;
+  color: #49AA9C;
+  opacity: 0.9;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  font-style: italic;
+}
+
+/* ===== BOTONES (DESKTOP) ===== */
+.btn-bootstrap {
+  margin-top: auto;
+  padding: 0.5rem 1rem;
+  background: transparent;
+  color: #49AA9C;
+  border: 2px solid #49AA9C;
+  border-radius: 25px;
+  font-family: var(--font-montserrat);
+  font-weight: 600;
+  font-size: 0.75rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  min-width: 110px;
+}
+
+.btn-bootstrap:hover {
+  background: #49AA9C;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(73, 170, 156, 0.3);
+}
+
+/* ===== MOBILE LAYOUT ===== */
+.roadmap-mobile-container {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.roadmap-step-mobile-bootstrap {
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.roadmap-step-mobile-bootstrap:last-child {
+  margin-bottom: 0;
+}
+
+/* ===== CARDS MOBILE ===== */
+.roadmap-card-mobile-bootstrap {
+  background: white;
+  border-radius: 20px;
+  padding: 1.5rem 1.25rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  cursor: pointer;
+  width: 100%;
+  max-width: 320px;
+  min-height: 250px;
+  border: 2px solid transparent;
+}
+
+.roadmap-card-mobile-bootstrap:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(73, 170, 156, 0.2);
+  border-color: rgba(73, 170, 156, 0.3);
+}
+
+/* ===== NÚMEROS MOBILE ===== */
+.step-number-mobile-bootstrap {
+  position: absolute;
+  top: -18px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, #49AA9C, #26A6B0);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-montserrat);
+  font-weight: 700;
+  font-size: 1.1rem;
+  box-shadow: 0 4px 15px rgba(73, 170, 156, 0.4);
+  z-index: 10;
+  border: 3px solid white;
+}
+
+/* ===== TEXTOS MOBILE ===== */
+.step-title-mobile-bootstrap {
+  font-family: var(--font-montserrat);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--color-neutro-oscuro);
+  margin-bottom: 0.5rem;
+  line-height: 1.3;
+  margin-top: 1rem;
+}
+
+.step-subtitle-mobile-bootstrap {
+  font-size: 0.85rem;
+  color: #49AA9C;
+  opacity: 0.9;
+  font-weight: 500;
+  margin-bottom: 1.25rem;
+  font-style: italic;
+}
+
+/* ===== BOTONES MOBILE ===== */
+.btn-mobile-bootstrap {
+  margin-top: auto;
+  padding: 0.6rem 1.25rem;
+  background: transparent;
+  color: #49AA9C;
+  border: 2px solid #49AA9C;
+  border-radius: 25px;
+  font-family: var(--font-montserrat);
+  font-weight: 600;
+  font-size: 0.8rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  min-width: 130px;
+}
+
+.btn-mobile-bootstrap:hover {
+  background: #49AA9C;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(73, 170, 156, 0.3);
+}
+
+/* ===== CONECTORES VERTICALES ===== */
+.connector-vertical {
+  width: 40px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem 0;
+}
+
+.connector-svg-vertical {
+  width: 100%;
+  height: 100%;
+}
+
+.connector-svg-vertical path {
+  stroke-dasharray: 100;
+  stroke-dashoffset: 100;
+  animation: drawLineVertical 1s ease forwards;
+}
+
+@keyframes drawLineVertical {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* ===== ESTADOS INTERACTIVOS ===== */
+.roadmap-card-bootstrap.active,
+.roadmap-card-mobile-bootstrap.active {
+  border-color: #49AA9C;
+  box-shadow: 0 8px 25px rgba(73, 170, 156, 0.25);
+}
+
+.roadmap-card-bootstrap.completed,
+.roadmap-card-mobile-bootstrap.completed {
+  background: linear-gradient(135deg, rgba(73, 170, 156, 0.05), rgba(38, 166, 176, 0.05));
+  border-color: #40997C;
+}
+
+.roadmap-card-bootstrap.completed .step-number-bootstrap,
+.roadmap-card-mobile-bootstrap.completed .step-number-mobile-bootstrap {
+  background: linear-gradient(135deg, #40997C, #49AA9C);
+}
+
+/* ===== ANIMACIONES DE ENTRADA ===== */
+.roadmap-card-bootstrap,
+.roadmap-card-mobile-bootstrap {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUpBootstrap 0.6s ease forwards;
+}
+
+.roadmap-card-bootstrap:nth-child(1) { animation-delay: 0.1s; }
+.roadmap-card-bootstrap:nth-child(2) { animation-delay: 0.2s; }
+.roadmap-card-bootstrap:nth-child(3) { animation-delay: 0.3s; }
+.roadmap-card-bootstrap:nth-child(4) { animation-delay: 0.4s; }
+
+.roadmap-step-mobile-bootstrap:nth-child(1) .roadmap-card-mobile-bootstrap { animation-delay: 0.1s; }
+.roadmap-step-mobile-bootstrap:nth-child(2) .roadmap-card-mobile-bootstrap { animation-delay: 0.2s; }
+.roadmap-step-mobile-bootstrap:nth-child(3) .roadmap-card-mobile-bootstrap { animation-delay: 0.3s; }
+.roadmap-step-mobile-bootstrap:nth-child(4) .roadmap-card-mobile-bootstrap { animation-delay: 0.4s; }
+
+@keyframes fadeInUpBootstrap {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== RESPONSIVE BREAKPOINTS ===== */
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .roadmap-title-bootstrap {
+    font-size: 2.8rem;
+  }
+  
+  .roadmap-subtitle-bootstrap {
+    font-size: 1.3rem;
+  }
+  
+  .roadmap-card-bootstrap {
+    height: 320px;
+    max-width: 300px;
+  }
+  
+  .step-title-bootstrap {
+    font-size: 1.3rem;
+  }
+  
+  .step-subtitle-bootstrap {
+    font-size: 1rem;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .roadmap-bootstrap {
+    padding: 3rem 0;
+  }
+  
+  .roadmap-title-bootstrap {
+    font-size: 2.2rem;
+  }
+  
+  .roadmap-subtitle-bootstrap {
+    font-size: 1.1rem;
+  }
+  
+  .roadmap-card-bootstrap {
+    height: 280px;
+    max-width: 260px;
+    padding: 1.75rem 1.25rem;
+  }
+  
+  .step-number-bootstrap {
+    width: 40px;
+    height: 40px;
+    font-size: 1.1rem;
+  }
+  
+  .step-icon-bootstrap {
+    width: 55px;
+    height: 55px;
+    font-size: 1.7rem;
+  }
+  
+  .step-title-bootstrap {
+    font-size: 1.1rem;
+  }
+  
+  .step-subtitle-bootstrap {
+    font-size: 0.85rem;
+  }
+  
+  .btn-bootstrap {
+    padding: 0.5rem 1.25rem;
+    font-size: 0.8rem;
+    min-width: 120px;
+  }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .roadmap-bootstrap {
+    padding: 2.5rem 0;
+    min-height: auto;
+  }
+  
+  .roadmap-title-bootstrap {
+    font-size: 2rem;
+  }
+  
+  .roadmap-subtitle-bootstrap {
+    font-size: 1rem;
+  }
+  
+  .roadmap-card-mobile-bootstrap {
+    max-width: 350px;
+    min-height: 260px;
+  }
+  
+  .step-title-mobile-bootstrap {
+    font-size: 1.2rem;
+  }
+  
+  .step-subtitle-mobile-bootstrap {
+    font-size: 0.9rem;
+  }
+  
+  .btn-mobile-bootstrap {
+    min-width: 140px;
+    font-size: 0.85rem;
+  }
+}
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+  .roadmap-bootstrap {
+    padding: 2rem 0;
+    min-height: auto;
+  }
+  
+  .roadmap-title-bootstrap {
+    font-size: 1.8rem;
+  }
+  
+  .roadmap-subtitle-bootstrap {
+    font-size: 0.95rem;
+  }
+  
+  .roadmap-card-mobile-bootstrap {
+    max-width: 300px;
+    min-height: 240px;
+    padding: 1.25rem 1rem;
+  }
+  
+  .step-number-mobile-bootstrap {
+    width: 35px;
+    height: 35px;
+    font-size: 1rem;
+    top: -15px;
+  }
+  
+  .step-icon-bootstrap {
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+  }
+  
+  .step-title-mobile-bootstrap {
+    font-size: 1rem;
+  }
+  
+  .step-subtitle-mobile-bootstrap {
+    font-size: 0.8rem;
+  }
+  
+  .btn-mobile-bootstrap {
+    padding: 0.5rem 1rem;
+    font-size: 0.75rem;
+    min-width: 120px;
+  }
+  
+  .connector-vertical {
+    height: 60px;
+  }
+}
+
+/* ===== ACCESIBILIDAD Y PREFERENCIAS ===== */
+@media (prefers-reduced-motion: reduce) {
+  .roadmap-card-bootstrap,
+  .roadmap-card-mobile-bootstrap,
+  .step-icon-bootstrap,
+  .connector-svg-horizontal path,
+  .connector-svg-vertical path {
+    animation: none;
+    transition: none;
+  }
+  
+  .roadmap-card-bootstrap:hover,
+  .roadmap-card-mobile-bootstrap:hover {
+    transform: none;
+  }
+}
+
+@media (prefers-contrast: high) {
+  .roadmap-card-bootstrap,
+  .roadmap-card-mobile-bootstrap {
+    border: 3px solid var(--color-neutro-oscuro);
+  }
+  
+  .step-number-bootstrap,
+  .step-number-mobile-bootstrap {
+    border: 3px solid white;
+  }
+  
+  .connector-svg-vertical path {
+    stroke-width: 3;
+  }
+}
+
+/* ===== FIX PARA SCROLL SUAVE ===== */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Prevenir pérdida de scroll en modales */
+body.modal-open {
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+}
+
+/* Asegurar que el roadmap no interfiera con otros elementos */
+.roadmap-bootstrap * {
+  box-sizing: border-box;
 }
 
 /* ===== Página de Agradecimiento ===== */

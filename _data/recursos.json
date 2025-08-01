@@ -1,0 +1,125 @@
+{
+  "etapas": [
+    {
+      "numero": 1,
+      "icon": "google-icon",
+      "titulo": "Perfil de Google",
+      "subtitulo": "Google My Business",
+      "modal": "modal-google-business",
+      "posicion": "right",
+      "pathSvg": "M0 20 Q20 8 40 20",
+      "pathSvgVertical": "M20 5 Q5 40 20 75",
+      "ultimo": false
+    },
+    {
+      "numero": 2,
+      "icon": "calendar-icon",
+      "titulo": "Google Calendar + Calendly",
+      "subtitulo": "Appointment Scheduling",
+      "modal": "modal-calendly",
+      "posicion": "left",
+      "pathSvg": "M80 20 Q60 8 40 20",
+      "pathSvgVertical": "M20 5 Q35 40 20 75",
+      "ultimo": false
+    },
+    {
+      "numero": 3,
+      "icon": "whatsapp-icon",
+      "titulo": "WhatsApp Business",
+      "subtitulo": "Semi-Automatic Responses",
+      "modal": "modal-whatsapp-business",
+      "posicion": "right",
+      "pathSvg": "M0 20 Q20 32 40 20",
+      "pathSvgVertical": "M20 5 Q5 40 20 75",
+      "ultimo": false
+    },
+    {
+      "numero": 4,
+      "icon": "folder-icon",
+      "titulo": "Organizar Información",
+      "subtitulo": "Information Management",
+      "modal": "modal-organizar-informacion",
+      "posicion": "left",
+      "pathSvg": "M80 20 Q60 32 40 20",
+      "pathSvgVertical": "M20 5 Q35 40 20 75",
+      "ultimo": true
+    }
+  ],
+  "modales": [
+    {
+      "modal": "modal-google-business",
+      "titulo": "Perfil de Google My Business",
+      "descripcion": "Configura tu presencia online local y aumenta tu visibilidad en Google.",
+      "beneficios": [
+        "📍 Aparece en búsquedas locales",
+        "⭐ Gestiona reseñas de clientes",
+        "📞 Facilita el contacto directo",
+        "📊 Obtén estadísticas de rendimiento"
+      ],
+      "resultado": "Mayor visibilidad local y más clientes potenciales encontrándote fácilmente.",
+      "cta": {
+        "titulo": "¿Listo para empezar?",
+        "descripcion": "Descarga un manual que te guiara en el proceso y comienza a aparecer en las búsquedas locales.",
+        "enlace": "https://drive.google.com/file/d/1aKtlOqF4CvBYuPr95-SjBTMfPhZ9bD0R/view?usp=sharing",
+        "textoBoton": "Descargar manual gratuito"
+      }
+    },
+    {
+      "modal": "modal-calendly",
+      "titulo": "Google Calendar + Calendly",
+      "descripcion": "Automatiza tu sistema de citas y sincroniza tu agenda profesional.",
+      "beneficios": [
+        "🗓️ Reservas automáticas 24/7",
+        "⏰ Sincroniza con tu calendario",
+        "📧 Confirmaciones automáticas",
+        "📅 Control total de horarios",
+        "🔄 Integración con Google Calendar"
+      ],
+      "resultado": "Ahorra horas semanales en coordinación de citas y mejora la experiencia del cliente.",
+      "cta": {
+        "titulo": "Automatiza tus citas",
+        "descripcion": "Descarga un manual y configura tu calendario que permite a los clientes reserven automáticamente.",
+        "enlace": "https://drive.google.com/file/d/1tuaz3dna9U0wbKjWBbiyz5CgvENvtQag/view?usp=sharing",
+        "textoBoton": "Descargar manual"
+      }
+    },
+    {
+      "modal": "modal-whatsapp-business",
+      "titulo": "WhatsApp Business",
+      "descripcion": "Implementa respuestas automáticas y mejora la atención al cliente.",
+      "beneficios": [
+        "🤖 Respuestas instantáneas",
+        "📋 Menús interactivos",
+        "� Métricas de conversación",
+        "👥 Gestión de contactos",
+        "🏷️ Etiquetas organizativas",
+        "📦 Catálogo de productos"
+      ],
+      "resultado": "Atención al cliente más eficiente y profesional, disponible 24/7.",
+      "cta": {
+        "titulo": "Mejora tu atención",
+        "descripcion": "Descarga un manual de WhatsApp Business y configura respuestas automáticas.",
+        "enlace": "https://drive.google.com/file/d/1U3fNyi3qe6RHXauLpRMyXJwhatgK7-ll/view?usp=sharing",
+        "textoBoton": "Descargar manual WhatsApp Business"
+      }
+    },
+    {
+      "modal": "modal-organizar-informacion",
+      "titulo": "Organizar Información",
+      "descripcion": "Centraliza y estructura toda la información de tu negocio.",
+      "beneficios": [
+        "📁 Sistema organizado",
+        "🔍 Búsqueda rápida",
+        "� Reportes automáticos",
+        "� Procesos estandarizados"
+      ],
+      "resultado": "Información accesible, procesos claros y operaciones más eficientes.",
+      "cta": {
+        "titulo": "Organiza tu negocio",
+        "descripcion": "Explora más recursos y herramientas para optimizar tu información.",
+        "enlace": "/contacto#contacto",
+        "textoBoton": "Solicitar ayuda personalizada"
+      }
+    }
+  ]
+}
