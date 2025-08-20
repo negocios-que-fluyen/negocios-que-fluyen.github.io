@@ -1,4 +1,31 @@
 <!-- MODALES PARA SERVICIOS -->
+<div id="modal-web" class="modal">
+  <div class="modal-content">
+    <button class="modal-close" onclick="closeModal('modal-web')" aria-label="Cerrar modal">&times;</button>
+    <h3>Desarrollo Web Profesional</h3>
+    <p class="modal-subtitle">Creamos sitios web modernos y atractivos que convierten visitantes en clientes, con todas las funcionalidades que tu negocio necesita.</p>
+    
+    <h4>Características incluidas:</h4>
+    <ul>
+      <li>Diseño responsivo (se adapta a móviles y tablets)</li>
+      <li>Formularios de contacto y cotización</li>
+      <li>Integración con redes sociales y WhatsApp</li>
+      <li>Optimización para motores de búsqueda (SEO)</li>
+      <li>Formulario de contacto e información de tu negocio</li>
+      <!-- <li>Sistema de reservas o citas online</li>
+      <li>Análisis de visitas y comportamiento</li> -->
+    </ul>
+    
+    <p class="resultado"><strong>Resultado:</strong> Un sitio web profesional que trabaja 24/7 para captar y convertir clientes.</p>
+    
+    <div class="modal-cta">
+      <h4>¿Listo para destacar en línea?</h4>
+      <p>Agenda una consulta gratuita y diseñemos juntos tu presencia web.</p>
+      <a href="/contacto#contacto" class="modal-btn">Solicitar Cotización Gratuita</a>
+    </div>
+  </div>
+</div>
+
 <div id="modal-automatizacion" class="modal">
   <div class="modal-content">
     <button class="modal-close" onclick="closeModal('modal-automatizacion')" aria-label="Cerrar modal">&times;</button>
