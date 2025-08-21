@@ -2,6 +2,7 @@
 layout: base
 title: Sobre Nosotros
 permalink: /sobre-nosotros/
+description: "Más que tecnología, somos propósito. Conoce nuestra misión de impulsar pequeños negocios con soluciones digitales humanas, accesibles y con valores sólidos."
 ---
 
 <section class="hero hero-sobre-nosotros">

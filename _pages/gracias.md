@@ -2,6 +2,7 @@
 layout: base
 title: ¡Gracias por contactarnos!
 permalink: /gracias/
+description: "¡Gracias por confiar en nosotros! Tu mensaje ha sido enviado. Te responderemos pronto. Mientras tanto, explora nuestros recursos gratuitos y síguenos en redes sociales."
 ---
 
 <section class="hero hero-gracias">

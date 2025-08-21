@@ -2,6 +2,7 @@
 layout: base
 title: Recursos
 permalink: /recursos/
+description: "Herramientas gratuitas para emprendedores. Descarga guías prácticas, plantillas y recursos que potencian tu crecimiento y te ayudan a automatizar procesos clave de tu negocio."
 ---
 
 <section class="hero hero-recursos">

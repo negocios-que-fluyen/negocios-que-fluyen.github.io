@@ -2,6 +2,7 @@
 layout: base
 title: Inicio
 permalink: /
+description: "Automatización inteligente para emprendedores. Transformamos pequeños negocios con soluciones digitales humanas: CRM, análisis de datos, marketing digital y procesos automatizados que multiplican tu impacto."
 ---
 
 <section class="hero hero-home">

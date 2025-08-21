@@ -3,7 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ title }} | Negocios que Fluyen</title>
+    
+    <!-- SEO Meta Tags -->
+    <title>{% if title == "Inicio" %}Negocios que Fluyen - Automatización Digital para Emprendedores{% else %}{{ title }} | Negocios que Fluyen{% endif %}</title>
+    <meta name="description" content="{% if description %}{{ description }}{% elif title == 'Inicio' %}Transformamos pequeños negocios con automatización inteligente y soluciones digitales humanas. Agenda, CRM, análisis de datos y marketing digital para emprendedores.{% elif title == 'Servicios' %}Servicios de automatización personalizada, análisis de datos, CRM básico y marketing digital con IA para pequeños negocios y emprendedores.{% elif title == 'Recursos' %}Herramientas gratuitas, guías prácticas y plantillas para optimizar tu negocio y automatizar procesos clave. Descarga recursos para emprendedores.{% elif title == 'Contacto' %}Contáctanos para automatizar procesos y multiplicar el impacto de tu negocio. Descubre cómo podemos ayudarte a crecer.{% elif title == 'Sobre Nosotros' %}Conoce nuestro equipo y misión. Impulsamos pequeños negocios con soluciones digitales humanas, accesibles y con propósito.{% else %}{{ title }} - Negocios que Fluyen, automatización digital para emprendedores{% endif %}">
+    <meta name="keywords" content="automatización, emprendedores, pequeños negocios, CRM, marketing digital, análisis de datos, WhatsApp Business, Google Sheets, soluciones digitales">
+    <meta name="author" content="Negocios que Fluyen">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://negocios-que-fluyen.com{{ page.url | url }}">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://negocios-que-fluyen.com{{ page.url | url }}">
+    <meta property="og:title" content="{% if title == 'Inicio' %}Negocios que Fluyen - Automatización Digital para Emprendedores{% else %}{{ title }} | Negocios que Fluyen{% endif %}">
+    <meta property="og:description" content="{% if description %}{{ description }}{% elif title == 'Inicio' %}Transformamos pequeños negocios con automatización inteligente y soluciones digitales humanas. Agenda, CRM, análisis de datos y marketing digital para emprendedores.{% elif title == 'Servicios' %}Servicios de automatización personalizada, análisis de datos, CRM básico y marketing digital con IA para pequeños negocios y emprendedores.{% elif title == 'Recursos' %}Herramientas gratuitas, guías prácticas y plantillas para optimizar tu negocio y automatizar procesos clave. Descarga recursos para emprendedores.{% elif title == 'Contacto' %}Contáctanos para automatizar procesos y multiplicar el impacto de tu negocio. Descubre cómo podemos ayudarte a crecer.{% elif title == 'Sobre Nosotros' %}Conoce nuestro equipo y misión. Impulsamos pequeños negocios con soluciones digitales humanas, accesibles y con propósito.{% else %}{{ title }} - Negocios que Fluyen, automatización digital para emprendedores{% endif %}">
+    <meta property="og:image" content="https://negocios-que-fluyen.com/assets/images/{% if title == 'Inicio' %}hero-home.png{% elif title == 'Servicios' %}hero-services.png{% elif title == 'Recursos' %}hero-resources.png{% elif title == 'Contacto' %}hero-contact.png{% elif title == 'Sobre Nosotros' %}hero-about-us.png{% else %}hero-home.png{% endif %}">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="{% if title == 'Inicio' %}Automatización digital para emprendedores{% elif title == 'Servicios' %}Servicios de automatización{% elif title == 'Recursos' %}Recursos gratuitos para emprendedores{% elif title == 'Contacto' %}Contacta con Negocios que Fluyen{% elif title == 'Sobre Nosotros' %}Equipo de Negocios que Fluyen{% else %}Negocios que Fluyen{% endif %}">
+    <meta property="og:site_name" content="Negocios que Fluyen">
+    <meta property="og:locale" content="es_MX">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://negocios-que-fluyen.com{{ page.url | url }}">
+    <meta name="twitter:title" content="{% if title == 'Inicio' %}Negocios que Fluyen - Automatización Digital para Emprendedores{% else %}{{ title }} | Negocios que Fluyen{% endif %}">
+    <meta name="twitter:description" content="{% if description %}{{ description }}{% elif title == 'Inicio' %}Transformamos pequeños negocios con automatización inteligente y soluciones digitales humanas. Agenda, CRM, análisis de datos y marketing digital para emprendedores.{% elif title == 'Servicios' %}Servicios de automatización personalizada, análisis de datos, CRM básico y marketing digital con IA para pequeños negocios y emprendedores.{% elif title == 'Recursos' %}Herramientas gratuitas, guías prácticas y plantillas para optimizar tu negocio y automatizar procesos clave. Descarga recursos para emprendedores.{% elif title == 'Contacto' %}Contáctanos para automatizar procesos y multiplicar el impacto de tu negocio. Descubre cómo podemos ayudarte a crecer.{% elif title == 'Sobre Nosotros' %}Conoce nuestro equipo y misión. Impulsamos pequeños negocios con soluciones digitales humanas, accesibles y con propósito.{% else %}{{ title }} - Negocios que Fluyen, automatización digital para emprendedores{% endif %}">
+    <meta name="twitter:image" content="https://negocios-que-fluyen.com/assets/images/{% if title == 'Inicio' %}hero-home.png{% elif title == 'Servicios' %}hero-services.png{% elif title == 'Recursos' %}hero-resources.png{% elif title == 'Contacto' %}hero-contact.png{% elif title == 'Sobre Nosotros' %}hero-about-us.png{% else %}hero-home.png{% endif %}">
+    <meta name="twitter:image:alt" content="{% if title == 'Inicio' %}Automatización digital para emprendedores{% elif title == 'Servicios' %}Servicios de automatización{% elif title == 'Recursos' %}Recursos gratuitos para emprendedores{% elif title == 'Contacto' %}Contacta con Negocios que Fluyen{% elif title == 'Sobre Nosotros' %}Equipo de Negocios que Fluyen{% else %}Negocios que Fluyen{% endif %}">
+    
+    <!-- Additional Meta Tags -->
+    <meta name="theme-color" content="#49AA9C">
+    <meta name="msapplication-TileColor" content="#49AA9C">
+    <meta name="google-site-verification" content="hnp0UievVziubpQva5fum5ggXdDCe-F68qAl3xpKesE">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Negocios que Fluyen",
+      "url": "https://negocios-que-fluyen.com",
+      "logo": "https://negocios-que-fluyen.com/assets/images/logo.png",
+      "description": "Especialistas en automatización digital para pequeños negocios y emprendedores",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+52-133-397-88350",
+        "contactType": "customer service",
+        "areaServed": "MX",
+        "availableLanguage": ["Spanish"]
+      },
+      "sameAs": [
+        "https://www.facebook.com/profile.php?id=61577235021894",
+        "https://www.instagram.com/negocios_que_fluyen/",
+        "https://wa.me/5213339788350"
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "MX"
+      }
+    }
+    </script>
+    
+    <!-- Page-specific structured data -->
+    {% if title == "Servicios" %}
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Automatización Digital para Emprendedores",
+      "provider": {
+        "@type": "Organization",
+        "name": "Negocios que Fluyen",
+        "url": "https://negocios-que-fluyen.github.io"
+      },
+      "description": "Servicios de automatización de procesos, análisis de datos, CRM básico y marketing digital con IA para pequeños negocios",
+      "serviceType": "Automatización Digital",
+      "areaServed": "México"
+    }
+    </script>
+    {% endif %}
     
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="/favicon.ico">

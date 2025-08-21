@@ -2,7 +2,7 @@
 layout: base
 title: Servicios
 permalink: /servicios/
-description: Explora nuestros servicios de automatización personalizada y productos digitales DIY para optimizar tu negocio.
+description: "Servicios de automatización personalizada, análisis de datos, CRM básico y marketing digital con IA. Soluciones digitales simples para pequeños negocios y emprendedores."
 ---
 
 <section class="hero hero-servicios">
