@@ -37,10 +37,10 @@ description: "Automatización inteligente para emprendedores. Transformamos pequ
       </div>
       <div class="tarjeta-servicio">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icono-servicio">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M8.625 12a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H8.25m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H12m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 0 1-2.555-.337A5.972 5.972 0 0 1 5.41 20.97a5.969 5.969 0 0 1-.474-.065 4.48 4.48 0 0 0 .978-2.025c.09-.457-.133-.901-.467-1.226C3.93 16.178 3 14.189 3 12c0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25Z" />
+          <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75 22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3-4.5 16.5" />
         </svg>
-        <h3>CRM B&aacute;sico</h3>
-        <p>Centraliza contactos y seguimientos en un solo lugar para crear relaciones duraderas con tus clientes.</p>
+        <h3>Desarrollo Web</h3>
+        <p>Sitios web profesionales y atractivos con formularios, redes sociales y diseño responsivo que conecta con tus clientes.</p>
         <a href="/servicios#servicios-contenido" class="btn-secundario">Ver detalles</a>
       </div>
       <div class="tarjeta-servicio">
@@ -63,7 +63,7 @@ description: "Automatización inteligente para emprendedores. Transformamos pequ
 
         <div class="swiper-slide">
           <div class="card-testimonio">
-            <img class="avatar" src="/assets/images/maria.jpg" alt="foto de maria">
+            <img class="avatar" src="/assets/images/maria.webp" alt="foto de maria">
             <p class="frase">“Gracias a la automatizaci&oacute;n, reduje un 50% del tiempo que dedicaba a la facturaci&oacute;n. Ahora tengo m&aacute;s tiempo para atender a mis pacientes con calma.”</p>
             <p class="autor"><strong>Mar&iacute;a Garc&iacute;a</strong><br><small>Emprendedora en Salud</small></p>
           </div>
@@ -71,7 +71,7 @@ description: "Automatización inteligente para emprendedores. Transformamos pequ
 
         <div class="swiper-slide">
           <div class="card-testimonio">
-            <img class="avatar" src="/assets/images/carlos.jpeg" alt="foto de carlos">
+            <img class="avatar" src="/assets/images/carlos.webp" alt="foto de carlos">
             <p class="frase">“Mis ventas crecieron un 30% tras implementar los tableros. Nunca imagin&eacute; que los datos me dar&iacute;an tanta claridad.”</p>
             <p class="autor"><strong>Carlos L&oacute;pez</strong><br><small>Due&ntilde;o de Papeler&iacute;a Creativa</small></p>
           </div>
@@ -79,15 +79,15 @@ description: "Automatización inteligente para emprendedores. Transformamos pequ
 
         <div class="swiper-slide">
           <div class="card-testimonio">
-            <img class="avatar" src="/assets/images/ana.jpeg" alt="foto de Ana">
-            <p class="frase">“El CRM me permiti&oacute; entender mejor a mis clientes. Hoy tengo relaciones m&aacute;s humanas y fieles con ellos.”</p>
+            <img class="avatar" src="/assets/images/ana.webp" alt="foto de Ana">
+            <p class="frase">“Gracias a NqF, mi p&aacute;gina web ahora refleja la esencia de mi negocio. Mis clientes pueden encontrarme f&aacute;cilmente y conectarse conmigo de manera profesional.”</p>
             <p class="autor"><strong>Ana Mart&iacute;nez</strong><br><small>Coach Personal</small></p>
           </div>
         </div>
 
         <div class="swiper-slide">
           <div class="card-testimonio">
-            <img class="avatar" src="/assets/images/luis.jpeg" alt="foto de luis">
+            <img class="avatar" src="/assets/images/luis.webp" alt="foto de luis">
             <p class="frase">“Antes sent&iacute;a que trabajaba para mi negocio. Ahora, con los flujos autom&aacute;ticos, mi negocio trabaja conmigo.”</p>
             <p class="autor"><strong>Luis Rodr&iacute;guez</strong><br><small>Consultor Independiente</small></p>
           </div>
@@ -95,7 +95,7 @@ description: "Automatización inteligente para emprendedores. Transformamos pequ
 
         <div class="swiper-slide">
           <div class="card-testimonio">
-            <img class="avatar" src="/assets/images/jazmin.jpeg" alt="foto de jazmin">
+            <img class="avatar" src="/assets/images/jazmin.webp" alt="foto de jazmin">
             <p class="frase">“Gracias al equipo de NqF, aprend&iacute; que automatizar no es volverse fr&iacute;o, es cuidar lo importante: mi familia y mis clientes.”</p>
             <p class="autor"><strong>Jazm&iacute;n Torres</strong><br><small>Artesana de Cosm&eacute;tica Natural</small></p>
           </div>
@@ -103,7 +103,7 @@ description: "Automatización inteligente para emprendedores. Transformamos pequ
 
         <div class="swiper-slide">
           <div class="card-testimonio">
-            <img class="avatar" src="/assets/images/pedro.jpeg" alt="foto de pedro">
+            <img class="avatar" src="/assets/images/pedro.webp" alt="foto de pedro">
             <p class="frase">“Con las herramientas que me dieron, pude lanzar mi producto sin estr&eacute;s. Todo fluye mejor desde entonces.”</p>
             <p class="autor"><strong>Pedro M&eacute;ndez</strong><br><small>Emprendedor Digital</small></p>
           </div>

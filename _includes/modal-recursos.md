@@ -37,35 +37,23 @@
       </div>
     </div>
   </div>
-</div>
+  </div>
 {% endfor %}
 
 <script>
-  // Modal functionality with improved animations and scroll management
-  let savedScrollPosition = 0;
-
+  // Modal functionality with improved animations
   function openModal(modalId) {
     const modal = document.getElementById(modalId);
     if (modal) {
-      // Guardar posición actual del scroll
-      savedScrollPosition = window.scrollY;
-      
-      // Prevenir scroll del body
+
       document.body.style.overflow = 'hidden';
-      document.body.style.position = 'fixed';
-      document.body.style.top = `-${savedScrollPosition}px`;
-      document.body.style.width = '100%';
-      
-      // Mostrar modal
+
       modal.style.display = 'flex';
-      
-      // Forzar reflow antes de añadir la clase
+
       modal.offsetHeight;
-      
-      // Añadir clase show para animación
+
       modal.classList.add('show');
 
-      // Focus en el botón cerrar después de la animación
       setTimeout(() => {
         const closeButton = modal.querySelector('.modal-close');
         if (closeButton) {
@@ -78,30 +66,16 @@
   function closeModal(modalId) {
     const modal = document.getElementById(modalId);
     if (modal) {
-      // Quitar clase show para animación de salida
+      // Remove show class for animation
       modal.classList.remove('show');
       
-      // Esperar a que termine la animación antes de ocultar
+      // Hide modal after animation completes
       setTimeout(() => {
         modal.style.display = 'none';
-        
-        // Restaurar scroll del body
-        document.body.style.overflow = '';
-        document.body.style.position = '';
-        document.body.style.top = '';
-        document.body.style.width = '';
-        
-        // Restaurar posición del scroll
-        window.scrollTo({
-          top: savedScrollPosition,
-          left: 0,
-          behavior: 'instant'
-        });
+        document.body.style.overflow = 'auto';
       }, 300);
     }
-  }
-
-  // Initialize modal event listeners
+  }  // Initialize modal event listeners
   document.addEventListener('DOMContentLoaded', function() {
     // Close modal when clicking outside
     document.querySelectorAll('.modal').forEach(modal => {

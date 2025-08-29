@@ -27,7 +27,7 @@ description: "Herramientas gratuitas para emprendedores. Descarga guías prácti
     <div class="row justify-content-center">
       <div class="col-12 text-center mb-5">
         <h2 class="roadmap-title-bootstrap">Tu Ruta hacia la Automatización</h2>
-        <p class="roadmap-subtitle-bootstrap">Sigue estos pasos para transformar tu negocio paso a paso</p>
+        <p class="roadmap-subtitle-bootstrap">Sigue estos pasos de forma ¡gratuita! para transformar tu negocio paso a paso</p>
       </div>
     </div>
 
