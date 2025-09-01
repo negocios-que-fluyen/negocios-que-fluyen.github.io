@@ -2319,7 +2319,7 @@ h5 {
 
 /* DESKTOP - Posicionamiento específico para cada hero */
 .hero-home {
-  background-image: url('/assets/images/hero-home.png');
+  background-image: url('/assets/images/hero-home.webp');
   background-position: center top;  /* Prioriza mostrar la parte superior */
   background-size: cover;  /* Por defecto usa cover para desktop normal */
   background-repeat: no-repeat;
@@ -2338,7 +2338,7 @@ h5 {
 }
 
 .hero-servicios {
-  background-image: url('/assets/images/hero-services.png');
+  background-image: url('/assets/images/hero-services.webp');
 }
 
 .hero-servicios .hero-content {
@@ -2350,7 +2350,7 @@ h5 {
 }
 
 .hero-contacto {
-  background-image: url('/assets/images/hero-contact.png');
+  background-image: url('/assets/images/hero-contact.webp');
 }
 
 .hero-contacto .hero-content {
@@ -2362,7 +2362,7 @@ h5 {
 }
 
 .hero-sobre-nosotros {
-  background-image: url('/assets/images/hero-about-us.png');
+  background-image: url('/assets/images/hero-about-us.webp');
 }
 
 .hero-sobre-nosotros .hero-content {
@@ -2374,7 +2374,7 @@ h5 {
 }
 
 .hero-recursos {
-  background-image: url('/assets/images/hero-resources.png');
+  background-image: url('/assets/images/hero-resources.webp');
 }
 
 .hero-recursos .hero-content {
@@ -2388,7 +2388,7 @@ h5 {
 /* TABLET - Ajustes de posición para pantallas medianas */
 @media (max-width: 1200px) and (min-width: 769px) {
   .hero-home {
-    background-image: url('/assets/images/hero-home-tablet.png');
+    background-image: url('/assets/images/hero-home-tablet.webp');
   }
   
   .hero-home .hero-content {
@@ -2398,7 +2398,7 @@ h5 {
   }
   
   .hero-servicios {
-    background-image: url('/assets/images/hero-services-tablet.png');
+    background-image: url('/assets/images/hero-services-tablet.webp');
   }
   
   .hero-servicios .hero-content {
@@ -2408,7 +2408,7 @@ h5 {
   }
   
   .hero-contacto {
-    background-image: url('/assets/images/hero-contact-tablet.png');
+    background-image: url('/assets/images/hero-contact-tablet.webp');
   }
   
   .hero-contacto .hero-content {
@@ -2418,7 +2418,7 @@ h5 {
   }
   
   .hero-sobre-nosotros {
-    background-image: url('/assets/images/hero-about-us-tablet.png');
+    background-image: url('/assets/images/hero-about-us-tablet.webp');
   }
   
   .hero-sobre-nosotros .hero-content {
@@ -2428,7 +2428,7 @@ h5 {
   }
   
   .hero-recursos {
-    background-image: url('/assets/images/hero-resources-tablet.png');
+    background-image: url('/assets/images/hero-resources-tablet.webp');
   }
   
   .hero-recursos .hero-content {
@@ -2450,7 +2450,7 @@ h5 {
   }
   
   .hero-home {
-    background-image: url('/assets/images/hero-home-mobile.png');
+    background-image: url('/assets/images/hero-home-mobile.webp');
   }
   
   .hero-home .hero-content {
@@ -2464,7 +2464,7 @@ h5 {
   }
   
   .hero-servicios {
-    background-image: url('/assets/images/hero-services-mobile.png');
+    background-image: url('/assets/images/hero-services-mobile.webp');
   }
   
   .hero-servicios .hero-content {
@@ -2478,7 +2478,7 @@ h5 {
   }
   
   .hero-contacto {
-    background-image: url('/assets/images/hero-contact-us-mobile.png');
+    background-image: url('/assets/images/hero-contact-us-mobile.webp');
   }
   
   .hero-contacto .hero-content {
@@ -2492,7 +2492,7 @@ h5 {
   }
   
   .hero-sobre-nosotros {
-    background-image: url('/assets/images/hero-about-us-mobile.png');
+    background-image: url('/assets/images/hero-about-us-mobile.webp');
   }
   
   .hero-sobre-nosotros .hero-content {
@@ -2506,7 +2506,7 @@ h5 {
   }
   
   .hero-recursos {
-    background-image: url('/assets/images/hero-resources-mobile.png');
+    background-image: url('/assets/images/hero-resources-mobile.webp');
   }
   
   .hero-recursos .hero-content {

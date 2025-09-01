@@ -2,6 +2,7 @@
 layout: base
 title: Contacto
 permalink: /contacto/
+description: "¿Listo para el siguiente nivel? Contáctanos y descubre cómo automatizar procesos y multiplicar el impacto de tu negocio con soluciones digitales personalizadas."
 ---
 
 <section class="hero hero-contacto">

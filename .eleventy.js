@@ -3,6 +3,9 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("css");
   eleventyConfig.addPassthroughCopy("assets");
   eleventyConfig.addPassthroughCopy("js");
+  eleventyConfig.addPassthroughCopy("robots.txt");
+  eleventyConfig.addPassthroughCopy("favicon.ico");
+  eleventyConfig.addPassthroughCopy("sitemap.xml");
   
   return {
     dir: {
@@ -10,8 +13,8 @@ module.exports = function(eleventyConfig) {
       output: "_site",
       includes: "_includes",
       layouts: "_layouts",
-      data: "_data",
-      pages: "_pages"
-    }
+      data: "_data"
+    },
+    templateFormats: ["md", "html", "njk"]
   };
 };
