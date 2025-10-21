@@ -24,6 +24,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/chatbot.css">
+    <link rel="stylesheet" href="/css/cookie-banner.css">
     <script src="/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="/css/swiper-bundle.min.css">
 </head>
@@ -39,6 +41,12 @@
         
     </main>
     {% include "footer.njk" %}
+    
+    <!-- Chatbot -->
+    {% include "chatbot.njk" %}
+    
+    <!-- Banner de Cookies -->
+    {% include "cookie-banner.njk" %}
     
     <!-- Hub flotante de redes sociales con rotación automática -->
     <div class="floating-social-hub" id="socialHub">
@@ -68,7 +76,7 @@
           <img src="/assets/icons/facebook.svg" alt="Facebook">
         </a>
         
-        <a href="https://wa.me/5213339788350" 
+        <a href="https://wa.me/523342822799" 
            class="expanded-icon whatsapp" 
            target="_blank" 
            aria-label="Contáctanos por WhatsApp"
@@ -82,5 +90,7 @@
     <script src="/js/hero-scroll.js"></script>
     <script src="/js/navbar.js"></script>
     <script src="/js/floating-social.js"></script>
+    <script src="/js/chatbot.js"></script>
+    <script src="/js/cookie-banner.js"></script>
 </body>
 </html>

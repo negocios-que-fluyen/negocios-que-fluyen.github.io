@@ -191,9 +191,18 @@
 
       modal.style.display = 'flex';
 
+      const modalContent = modal.querySelector('.modal-content');
+      if (modalContent) {
+        modalContent.classList.remove('modal-animate');
+      }
+
       modal.offsetHeight;
 
       modal.classList.add('show');
+
+      if (modalContent) {
+        modalContent.classList.add('modal-animate');
+      }
 
       setTimeout(() => {
         const closeButton = modal.querySelector('.modal-close');
@@ -209,11 +218,15 @@
     if (modal) {
       // Remove show class for animation
       modal.classList.remove('show');
+      const modalContent = modal.querySelector('.modal-content');
       
       // Hide modal after animation completes
       setTimeout(() => {
         modal.style.display = 'none';
         document.body.style.overflow = 'auto';
+        if (modalContent) {
+          modalContent.classList.remove('modal-animate');
+        }
       }, 300);
     }
   }
@@ -239,3 +252,69 @@
     });
   });
 </script>
+
+<!-- MODALES DE PLANES DE PÁGINAS WEB -->
+<div id="modal-plan-a" class="modal" aria-hidden="true">
+  <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modal-plan-a-title">
+    <button class="modal-close" onclick="closeModal('modal-plan-a')" aria-label="Cerrar modal">&times;</button>
+    <h3 id="modal-plan-a-title">Opción A — Básica (promo)</h3>
+    <p class="modal-subtitle">Sitio web funcional de hasta 4 páginas, ideal para presencia sólida y clara.</p>
+    <h4>Incluye:</h4>
+    <ul>
+      <li>Hasta 4 páginas: Inicio, Servicios/Productos, Nosotros y Contacto</li>
+      <li>Diseño responsivo y optimizado para rendimiento</li>
+      <li>Formulario de contacto y WhatsApp</li>
+      <li>Buenas prácticas de SEO técnico básico</li>
+      <li>Despliegue y configuración de dominio (dominio adquirido por el cliente)</li>
+    </ul>
+    <p class="resultado"><strong>Entrega:</strong> 7 días hábiles desde la recepción de contenido y aprobaciones.</p>
+    <div class="modal-cta">
+      <h4>¿Listo para empezar?</h4>
+      <p>Pago en 2 partes: 50% anticipo ($2,250 MXN) y 50% contra entrega ($2,250 MXN).</p>
+      <a href="/contacto#contacto" class="modal-btn">Quiero la Opción A</a>
+    </div>
+  </div>
+  
+</div>
+
+<div id="modal-plan-b" class="modal" aria-hidden="true">
+  <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modal-plan-b-title">
+    <button class="modal-close" onclick="closeModal('modal-plan-b')" aria-label="Cerrar modal">&times;</button>
+    <h3 id="modal-plan-b-title">Opción B — Estándar</h3>
+    <p class="modal-subtitle">La opción recomendada para un lanzamiento cuidado con un ajuste adicional.</p>
+    <h4>Incluye todo lo de la Opción A +</h4>
+    <ul>
+      <li>1 ajuste de contenido adicional posterior a la entrega</li>
+      <li>Soporte de 7 días para dudas menores</li>
+      <li>Optimización ligera posterior según feedback</li>
+    </ul>
+    <p class="resultado"><strong>Precio:</strong> $5,000 MXN. <strong>Pago:</strong> 50% anticipo ($2,500) y 50% contra entrega ($2,500).</p>
+    <div class="modal-cta">
+      <h4>Te acompañamos en el arranque</h4>
+      <p>Ideal si necesitas un pequeño ajuste tras publicar.</p>
+      <a href="/contacto#contacto" class="modal-btn">Quiero la Opción B</a>
+    </div>
+  </div>
+</div>
+
+<div id="modal-plan-c" class="modal" aria-hidden="true">
+  <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modal-plan-c-title">
+    <button class="modal-close" onclick="closeModal('modal-plan-c')" aria-label="Cerrar modal">&times;</button>
+    <h3 id="modal-plan-c-title">Opción C — Pro con IA</h3>
+    <p class="modal-subtitle">Para proyectos que quieren ir más allá e integrar un asistente inteligente en el sitio.</p>
+    <h4>Incluye todo lo de la Opción B +</h4>
+    <ul>
+      <li>Chatbot con IA embebido que responde sobre tu marca</li>
+      <li>Carga inicial de conocimiento (hasta 20 páginas o 10 documentos) y guía para actualizar respuestas</li>
+      <li>Soporte post‑entrega por 14 días</li>
+      <li>Administración mensual desde $699 MXN (incluye VPS y consumo del LLM hasta los límites del plan; puede variar según consumo de la API)</li>
+      <li>Entrega estimada en 10 días hábiles</li>
+    </ul>
+    <p class="resultado"><strong>Precio:</strong> $6,500 MXN. <strong>Pago:</strong> 50% anticipo ($3,250) y 50% contra entrega ($3,250).</p>
+    <div class="modal-cta">
+      <h4>Convierte más con IA</h4>
+      <p>Respondemos preguntas frecuentes al instante y guiamos a tus visitantes. Las automatizaciones con n8n son opcionales.</p>
+      <a href="/contacto#contacto" class="modal-btn">Quiero la Opción C</a>
+    </div>
+  </div>
+</div>
