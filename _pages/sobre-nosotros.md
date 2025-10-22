@@ -21,6 +21,27 @@ description: "Más que tecnología, somos propósito. Conoce nuestra misión de 
 <div class="post-hero-espaciado"></div>
 <section id="sobre-nosotros" class="seccion">
 <h2 class="titulo-h2 centrado">&iquest;Qui&eacute;nes somos?</h2>
+<div class="identidad-sobre-nosotros" role="presentation">
+  <span class="identidad-badge">Startup con prop&oacute;sito</span>
+  <h3 class="identidad-titulo" aria-label="Negocios que Fluyen, startup para peque&ntilde;os y medianos negocios">Negocios que Fluyen</h3>
+  <p class="identidad-texto">
+    Somos una startup nacida para cuidar el bienestar de peque&ntilde;os y medianos negocios. Dise&ntilde;amos experiencias digitales, acompa&ntilde;amiento humano y procesos ordenados para que cada emprendimiento respire, se organice y crezca con paz.
+  </p>
+  <div class="identidad-pilares">
+    <article class="identidad-pilar">
+      <h4>Bienestar Empresarial</h4>
+      <p>Creamos soluciones que alivian la carga operativa y fortalecen la sostenibilidad del negocio.</p>
+    </article>
+    <article class="identidad-pilar">
+      <h4>Dise&ntilde;o Humano</h4>
+      <p>Acompa&ntilde;amos con procesos emp&aacute;ticos que honran la historia y el prop&oacute;sito de cada equipo.</p>
+    </article>
+    <article class="identidad-pilar">
+      <h4>Impacto Local</h4>
+      <p>Medimos el &eacute;xito por las comunidades que florecen gracias a negocios m&aacute;s ordenados y seguros.</p>
+    </article>
+  </div>
+</div>
 <div class="flex-horizontal">
   <div class="columna centrado mision">
     <h3 class="subtitulo">Nuestra Misi&oacute;n</h3>

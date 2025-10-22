@@ -33,7 +33,9 @@ description: "Automatización inteligente para emprendedores. Transformamos pequ
         </svg>
         <h3>Automatizaci&oacute;n</h3>
         <p>Libera tiempo automatizando agendas, recordatorios y cobros sin perder el toque personal de tu negocio.</p>
-        <a href="/servicios#servicios-contenido" class="btn-secundario">Ver detalles</a>
+        <button type="button" class="btn-secundario" onclick="openModal('modal-automatizacion-home')">
+          Ver detalles
+        </button>
       </div>
       <div class="tarjeta-servicio">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icono-servicio">
@@ -41,25 +43,178 @@ description: "Automatización inteligente para emprendedores. Transformamos pequ
         </svg>
         <h3>Desarrollo Web</h3>
         <p>Sitios web profesionales y atractivos con formularios, redes sociales y diseño responsivo que conecta con tus clientes.</p>
-        <a href="/servicios#servicios-contenido" class="btn-secundario">Ver detalles</a>
+        <button type="button" class="btn-secundario" onclick="openModal('modal-desarrollo-web-home')">
+          Ver detalles
+        </button>
       </div>
       <div class="tarjeta-servicio">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icono-servicio">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M15.042 21.672 13.684 16.6m0 0-2.51 2.225.569-9.47 5.227 7.917-3.286-.672ZM12 2.25V4.5m5.834.166-1.591 1.591M20.25 10.5H18M7.757 14.743l-1.59 1.59M6 10.5H3.75m4.007-4.243-1.59-1.59" />
+          <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+          <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
         </svg>
-        <h3>Marketing IA</h3>
-        <p>Crea contenidos y campa&ntilde;as con apoyo de inteligencia artificial sin complicaciones t&eacute;cnicas.</p>
-        <a href="/servicios#servicios-contenido" class="btn-secundario">Ver detalles</a>
+        <h3>SEO Local</h3>
+        <p>Mejora tu presencia en Google Maps y b&uacute;squedas locales con soporte continuo en SEO para atraer m&aacute;s clientes.</p>
+        <button type="button" class="btn-secundario" onclick="openModal('modal-seo-local-home')">
+          Ver detalles
+        </button>
       </div>
     </div>
   </div>
 </section>
-
+<section class="portafolio-home" aria-labelledby="portafolio-title">
+  <div class="portafolio-wrap">
+    <h2 id="portafolio-title" class="titulo-seccion">Nuestros &uacute;ltimos proyectos</h2>
+    <div class="portafolio-grid">
+      <article class="portafolio-card">
+        <div class="portafolio-thumb portafolio-thumb-heemsa">
+          <span class="portafolio-domain">heemsa.com</span>
+        </div>
+        <div class="portafolio-contenido">
+          <h3>Heemsa</h3>
+          <p>Portal corporativo para una empresa de ingenier&iacute;a y mantenimiento industrial con enfoque en captar prospectos B2B.</p>
+          <a class="btn-primario btn-portafolio" href="https://www.heemsa.com/" target="_blank" rel="noopener noreferrer">Visitar sitio</a>
+        </div>
+      </article>
+      <article class="portafolio-card">
+        <div class="portafolio-thumb portafolio-thumb-pfr">
+          <span class="portafolio-domain">pfrseguros.com.mx</span>
+        </div>
+        <div class="portafolio-contenido">
+          <h3>Protect From Risk</h3>
+          <p>Sitio de aseguradora con landing pages para campa&ntilde;as locales, formularios optimizados y seguimiento automatizado.</p>
+          <a class="btn-primario btn-portafolio" href="https://pfrseguros.com.mx/" target="_blank" rel="noopener noreferrer">Visitar sitio</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
 <section class="testimonial-section py-5">
   <div class="container">
-  
     <div class="swiper testimonial-swiper">
       <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="card-testimonio card-testimonio-google">
+            <div class="google-badge">
+              <svg class="google-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="16" height="16">
+                <path fill="#4285F4" d="M45.12 24.5c0-1.56-.14-3.06-.4-4.5H24v8.51h11.84c-.51 2.75-2.06 5.08-4.39 6.64v5.52h7.11c4.16-3.83 6.56-9.47 6.56-16.17z"/>
+                <path fill="#34A853" d="M24 46c5.94 0 10.92-1.97 14.56-5.33l-7.11-5.52c-1.97 1.32-4.49 2.1-7.45 2.1-5.73 0-10.58-3.87-12.31-9.07H4.34v5.7C7.96 41.07 15.4 46 24 46z"/>
+                <path fill="#FBBC05" d="M11.69 28.18C11.25 26.86 11 25.45 11 24s.25-2.86.69-4.18v-5.7H4.34C2.85 17.09 2 20.45 2 24c0 3.55.85 6.91 2.34 9.88l7.35-5.7z"/>
+                <path fill="#EA4335" d="M24 10.75c3.23 0 6.13 1.11 8.41 3.29l6.31-6.31C34.91 4.18 29.93 2 24 2 15.4 2 7.96 6.93 4.34 14.12l7.35 5.7c1.73-5.2 6.58-9.07 12.31-9.07z"/>
+              </svg>
+              <span>Rese&ntilde;a de Google</span>
+            </div>
+            <div class="google-stars">
+              <svg class="star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#FBBC04" width="18" height="18">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+              </svg>
+              <svg class="star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#FBBC04" width="18" height="18">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+              </svg>
+              <svg class="star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#FBBC04" width="18" height="18">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+              </svg>
+              <svg class="star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#FBBC04" width="18" height="18">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+              </svg>
+              <svg class="star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#FBBC04" width="18" height="18">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+              </svg>
+            </div>
+            <img class="avatar" src="/assets/images/heemsa.png" alt="logo de HEEMSA Snap-on">
+            <p class="frase">"Excelente trabajo, rapidez, profesionalismo."</p>
+            <p class="autor"><strong>HEEMSA Snap-on</strong><br><small>1 rese&ntilde;a</small></p>
+            <a href="https://share.google/rniJzHQaP9xEMRzpu" target="_blank" rel="noopener noreferrer" class="google-link">
+              Ver en Google Maps
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                <polyline points="15 3 21 3 21 9"></polyline>
+                <line x1="10" y1="14" x2="21" y2="3"></line>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="card-testimonio card-testimonio-google">
+            <div class="google-badge">
+              <svg class="google-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="16" height="16">
+                <path fill="#4285F4" d="M45.12 24.5c0-1.56-.14-3.06-.4-4.5H24v8.51h11.84c-.51 2.75-2.06 5.08-4.39 6.64v5.52h7.11c4.16-3.83 6.56-9.47 6.56-16.17z"/>
+                <path fill="#34A853" d="M24 46c5.94 0 10.92-1.97 14.56-5.33l-7.11-5.52c-1.97 1.32-4.49 2.1-7.45 2.1-5.73 0-10.58-3.87-12.31-9.07H4.34v5.7C7.96 41.07 15.4 46 24 46z"/>
+                <path fill="#FBBC05" d="M11.69 28.18C11.25 26.86 11 25.45 11 24s.25-2.86.69-4.18v-5.7H4.34C2.85 17.09 2 20.45 2 24c0 3.55.85 6.91 2.34 9.88l7.35-5.7z"/>
+                <path fill="#EA4335" d="M24 10.75c3.23 0 6.13 1.11 8.41 3.29l6.31-6.31C34.91 4.18 29.93 2 24 2 15.4 2 7.96 6.93 4.34 14.12l7.35 5.7c1.73-5.2 6.58-9.07 12.31-9.07z"/>
+              </svg>
+              <span>Rese&ntilde;a de Google</span>
+            </div>
+            <div class="google-stars">
+              <svg class="star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#FBBC04" width="18" height="18">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+              </svg>
+              <svg class="star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#FBBC04" width="18" height="18">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+              </svg>
+              <svg class="star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#FBBC04" width="18" height="18">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+              </svg>
+              <svg class="star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#FBBC04" width="18" height="18">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+              </svg>
+              <svg class="star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#FBBC04" width="18" height="18">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+              </svg>
+            </div>
+            <img class="avatar" src="/assets/images/jazmin-dimas.png" alt="foto de Jazmin Dimas">
+            <p class="frase">"Muy bien servicio, todo el tiempo est&aacute;n al pendiente de tu proceso y te resuelven cualquier duda. He tenido mejores resultados en mi negocio."</p>
+            <p class="autor"><strong>Jazm&iacute;n Dimas</strong><br><small>1 rese&ntilde;a</small></p>
+            <a href="https://maps.app.goo.gl/2PFHbGxfkPxiZBSU6" target="_blank" rel="noopener noreferrer" class="google-link">
+              Ver en Google Maps
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                <polyline points="15 3 21 3 21 9"></polyline>
+                <line x1="10" y1="14" x2="21" y2="3"></line>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="card-testimonio card-testimonio-google">
+            <div class="google-badge">
+              <svg class="google-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="16" height="16">
+                <path fill="#4285F4" d="M45.12 24.5c0-1.56-.14-3.06-.4-4.5H24v8.51h11.84c-.51 2.75-2.06 5.08-4.39 6.64v5.52h7.11c4.16-3.83 6.56-9.47 6.56-16.17z"/>
+                <path fill="#34A853" d="M24 46c5.94 0 10.92-1.97 14.56-5.33l-7.11-5.52c-1.97 1.32-4.49 2.1-7.45 2.1-5.73 0-10.58-3.87-12.31-9.07H4.34v5.7C7.96 41.07 15.4 46 24 46z"/>
+                <path fill="#FBBC05" d="M11.69 28.18C11.25 26.86 11 25.45 11 24s.25-2.86.69-4.18v-5.7H4.34C2.85 17.09 2 20.45 2 24c0 3.55.85 6.91 2.34 9.88l7.35-5.7z"/>
+                <path fill="#EA4335" d="M24 10.75c3.23 0 6.13 1.11 8.41 3.29l6.31-6.31C34.91 4.18 29.93 2 24 2 15.4 2 7.96 6.93 4.34 14.12l7.35 5.7c1.73-5.2 6.58-9.07 12.31-9.07z"/>
+              </svg>
+              <span>Rese&ntilde;a de Google</span>
+            </div>
+            <div class="google-stars">
+              <svg class="star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#FBBC04" width="18" height="18">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+              </svg>
+              <svg class="star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#FBBC04" width="18" height="18">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+              </svg>
+              <svg class="star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#FBBC04" width="18" height="18">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+              </svg>
+              <svg class="star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#FBBC04" width="18" height="18">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+              </svg>
+              <svg class="star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#FBBC04" width="18" height="18">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+              </svg>
+            </div>
+            <img class="avatar" src="/assets/images/protect-from-risk.png" alt="foto de Protect From Risk">
+            <p class="frase">"Servicio muy efectivo, atenci&oacute;n personalizada. Me entregaron una p&aacute;gina web adaptada exactamente a lo que necesitaba. Les importa el trabajo que hacen y la satisfacci&oacute;n del cliente..."</p>
+            <p class="autor"><strong>Protect From Risk</strong><br><small>1 rese&ntilde;a</small></p>
+            <a href="https://maps.app.goo.gl/bNwDGQpJWj97CF3c6" target="_blank" rel="noopener noreferrer" class="google-link">
+              Ver en Google Maps
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                <polyline points="15 3 21 3 21 9"></polyline>
+                <line x1="10" y1="14" x2="21" y2="3"></line>
+              </svg>
+            </a>
+          </div>
+        </div>
 
         <div class="swiper-slide">
           <div class="card-testimonio">
@@ -68,7 +223,6 @@ description: "Automatización inteligente para emprendedores. Transformamos pequ
             <p class="autor"><strong>Mar&iacute;a Garc&iacute;a</strong><br><small>Emprendedora en Salud</small></p>
           </div>
         </div>
-
         <div class="swiper-slide">
           <div class="card-testimonio">
             <img class="avatar" src="/assets/images/carlos.webp" alt="foto de carlos">
@@ -76,7 +230,6 @@ description: "Automatización inteligente para emprendedores. Transformamos pequ
             <p class="autor"><strong>Carlos L&oacute;pez</strong><br><small>Due&ntilde;o de Papeler&iacute;a Creativa</small></p>
           </div>
         </div>
-
         <div class="swiper-slide">
           <div class="card-testimonio">
             <img class="avatar" src="/assets/images/ana.webp" alt="foto de Ana">
@@ -107,9 +260,14 @@ description: "Automatización inteligente para emprendedores. Transformamos pequ
             <p class="frase">“Con las herramientas que me dieron, pude lanzar mi producto sin estr&eacute;s. Todo fluye mejor desde entonces.”</p>
             <p class="autor"><strong>Pedro M&eacute;ndez</strong><br><small>Emprendedor Digital</small></p>
           </div>
-        </div>
+        </div> -->
 
       </div>
 
   </div>
 </section>
+
+<!-- Modales de Servicios -->
+{% include "modal-automatizacion.njk" %}
+{% include "modal-desarrollo-web.njk" %}
+{% include "modal-seo-local.njk" %}

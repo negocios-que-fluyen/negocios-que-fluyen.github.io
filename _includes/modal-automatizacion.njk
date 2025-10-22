@@ -1,0 +1,94 @@
+<!-- Modal de Automatización -->
+<div id="modal-automatizacion-home" class="modal" aria-hidden="true">
+  <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modal-automatizacion-home-title">
+    <button class="modal-close" onclick="closeModal('modal-automatizacion-home')" aria-label="Cerrar modal">&times;</button>
+    <h3 id="modal-automatizacion-home-title">Automatización de Procesos</h3>
+    <p class="modal-subtitle">Libera tu agenda y mantén a tus clientes atendidos con flujos automáticos diseñados para negocios pequeños.</p>
+    <h4>¿Qué incluye este servicio?</h4>
+    <ul>
+      <li>Recordatorios automáticos de citas y eventos clave.</li>
+      <li>Mensajes de seguimiento y confirmaciones sin intervención manual.</li>
+      <li>Recordatorios de pagos y facturas pendientes.</li>
+      <li>Integraciones con herramientas como WhatsApp, Email, Google Sheets o tu CRM.</li>
+      <li>Flujos personalizados construidos alrededor de tus procesos actuales.</li>
+    </ul>
+    <p class="resultado"><strong>Resultado:</strong> Recuperas horas cada semana mientras tus clientes reciben atención constante.</p>
+    <div class="modal-cta">
+      <h4>¿Listo para automatizar?</h4>
+      <p>Agenda una consulta gratuita y diseñemos el flujo que más impacto te dará.</p>
+      <a href="/contacto#contacto" class="modal-btn">Solicitar consulta gratuita</a>
+    </div>
+  </div>
+</div>
+
+<script>
+  if (!window.nqfModalInit) {
+    window.nqfModalInit = true;
+
+    window.openModal = function(modalId) {
+      const modal = document.getElementById(modalId);
+      if (modal) {
+        document.body.style.overflow = 'hidden';
+        modal.style.display = 'flex';
+
+        const modalContent = modal.querySelector('.modal-content');
+        if (modalContent) {
+          modalContent.classList.remove('modal-animate');
+        }
+
+        modal.offsetHeight;
+        modal.classList.add('show');
+
+        if (modalContent) {
+          modalContent.classList.add('modal-animate');
+        }
+
+        setTimeout(() => {
+          const closeButton = modal.querySelector('.modal-close');
+          if (closeButton) {
+            closeButton.focus();
+          }
+        }, 400);
+      }
+    };
+
+    window.closeModal = function(modalId) {
+      const modal = document.getElementById(modalId);
+      if (modal) {
+        modal.classList.remove('show');
+        const modalContent = modal.querySelector('.modal-content');
+        setTimeout(() => {
+          modal.style.display = 'none';
+          document.body.style.overflow = 'auto';
+          if (modalContent) {
+            modalContent.classList.remove('modal-animate');
+          }
+        }, 300);
+      }
+    };
+
+    const initModalListeners = function() {
+      document.querySelectorAll('.modal').forEach((modal) => {
+        modal.addEventListener('click', (e) => {
+          if (e.target === modal) {
+            closeModal(modal.id);
+          }
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+          document.querySelectorAll('.modal.show').forEach((modal) => {
+            closeModal(modal.id);
+          });
+        }
+      });
+    };
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initModalListeners);
+    } else {
+      initModalListeners();
+    }
+  }
+</script>
