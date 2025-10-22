@@ -2,6 +2,7 @@
 layout: base
 title: Inicio
 permalink: /
+description: "Automatización inteligente para emprendedores. Transformamos pequeños negocios con soluciones digitales humanas: CRM, análisis de datos, marketing digital y procesos automatizados que multiplican tu impacto."
 ---
 
 <section class="hero hero-home">
@@ -217,30 +218,46 @@ permalink: /
 
         <div class="swiper-slide">
           <div class="card-testimonio">
-            <img class="avatar" src="/assets/images/maria.jpg" alt="foto de maria">
+            <img class="avatar" src="/assets/images/maria.webp" alt="foto de maria">
             <p class="frase">“Gracias a la automatizaci&oacute;n, reduje un 50% del tiempo que dedicaba a la facturaci&oacute;n. Ahora tengo m&aacute;s tiempo para atender a mis pacientes con calma.”</p>
             <p class="autor"><strong>Mar&iacute;a Garc&iacute;a</strong><br><small>Emprendedora en Salud</small></p>
           </div>
         </div>
         <div class="swiper-slide">
           <div class="card-testimonio">
-            <img class="avatar" src="/assets/images/carlos.jpeg" alt="foto de carlos">
+            <img class="avatar" src="/assets/images/carlos.webp" alt="foto de carlos">
             <p class="frase">“Mis ventas crecieron un 30% tras implementar los tableros. Nunca imagin&eacute; que los datos me dar&iacute;an tanta claridad.”</p>
             <p class="autor"><strong>Carlos L&oacute;pez</strong><br><small>Due&ntilde;o de Papeler&iacute;a Creativa</small></p>
           </div>
         </div>
         <div class="swiper-slide">
           <div class="card-testimonio">
-            <img class="avatar" src="/assets/images/ana.jpeg" alt="foto de Ana">
+            <img class="avatar" src="/assets/images/ana.webp" alt="foto de Ana">
             <p class="frase">“Gracias a NqF, mi p&aacute;gina web ahora refleja la esencia de mi negocio. Mis clientes pueden encontrarme f&aacute;cilmente y conectarse conmigo de manera profesional.”</p>
             <p class="autor"><strong>Ana Mart&iacute;nez</strong><br><small>Coach Personal</small></p>
           </div>
         </div>
 
-     <!--    <div class="swiper-slide">
+        <div class="swiper-slide">
           <div class="card-testimonio">
-            <img class="avatar" src="/assets/images/pedro.jpeg" alt="foto de pedro">
-            <p class="frase">"Con las herramientas que me dieron, pude lanzar mi producto sin estr&eacute;s. Todo fluye mejor desde entonces."</p>
+            <img class="avatar" src="/assets/images/luis.webp" alt="foto de luis">
+            <p class="frase">“Antes sent&iacute;a que trabajaba para mi negocio. Ahora, con los flujos autom&aacute;ticos, mi negocio trabaja conmigo.”</p>
+            <p class="autor"><strong>Luis Rodr&iacute;guez</strong><br><small>Consultor Independiente</small></p>
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="card-testimonio">
+            <img class="avatar" src="/assets/images/jazmin.webp" alt="foto de jazmin">
+            <p class="frase">“Gracias al equipo de NqF, aprend&iacute; que automatizar no es volverse fr&iacute;o, es cuidar lo importante: mi familia y mis clientes.”</p>
+            <p class="autor"><strong>Jazm&iacute;n Torres</strong><br><small>Artesana de Cosm&eacute;tica Natural</small></p>
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="card-testimonio">
+            <img class="avatar" src="/assets/images/pedro.webp" alt="foto de pedro">
+            <p class="frase">“Con las herramientas que me dieron, pude lanzar mi producto sin estr&eacute;s. Todo fluye mejor desde entonces.”</p>
             <p class="autor"><strong>Pedro M&eacute;ndez</strong><br><small>Emprendedor Digital</small></p>
           </div>
         </div> -->

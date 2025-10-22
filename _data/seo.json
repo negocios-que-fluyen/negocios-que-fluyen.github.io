@@ -1,0 +1,31 @@
+{
+  "site": {
+    "name": "Negocios que Fluyen",
+    "url": "https://negocios-que-fluyen.com",
+    "description": "Transformamos pequeños negocios con automatización inteligente y soluciones digitales humanas.",
+    "author": "Negocios que Fluyen",
+    "keywords": "automatización, emprendedores, pequeños negocios, CRM, marketing digital, análisis de datos, WhatsApp Business, Google Sheets, soluciones digitales, automatización para negocios pequeños, automatización con WhatsApp Business, automatización con Google Sheets, herramientas digitales para emprendedores, optimización de procesos, eficiencia empresarial, tecnología para pequeños negocios",
+    "language": "es",
+    "locale": "es_MX",
+    "theme_color": "#49AA9C",
+    "facebook": "https://www.facebook.com/profile.php?id=61577235021894",
+    "instagram": "https://www.instagram.com/negocios_que_fluyen/"
+  },
+  "default_images": {
+    "og_image": "/assets/images/hero-home.webp",
+    "logo": "/assets/images/logo.png"
+  },
+  "structured_data": {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Negocios que Fluyen",
+    "url": "https://negocios-que-fluyen.com",
+    "logo": "https://negocios-que-fluyen.com/assets/images/logo.png",
+    "description": "Especialistas en automatización digital para pequeños negocios y emprendedores",
+    "sameAs": [
+      "https://www.facebook.com/profile.php?id=61577235021894",
+      "https://www.instagram.com/negocios_que_fluyen/",
+      "https://wa.me/5213339788350"
+    ]
+  }
+}
