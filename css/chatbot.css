@@ -1,0 +1,168 @@
+/* ==========================================
+   CHATBOT - NEGOCIOS QUE FLUYEN
+   ========================================== */
+
+/* Botón del chatbot */
+#chat-cta {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--color-primario) 0%, var(--color-secundario3) 100%);
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 16px rgba(42, 134, 171, 0.3);
+  transition: all 0.3s ease;
+  z-index: 9998;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#chat-cta.hidden {
+  opacity: 0;
+  transform: translateY(20px);
+  pointer-events: none;
+}
+
+#chat-cta:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(42, 134, 171, 0.4);
+}
+
+#chat-cta:active {
+  transform: scale(0.95);
+}
+
+/* Estilos del chat */
+#custom-chat {
+  position: fixed;
+  bottom: 100px;
+  right: 24px;
+  width: 380px;
+  max-width: calc(100vw - 3rem);
+  height: 550px;
+  max-height: calc(100vh - 8rem);
+  background: white;
+  border-radius: 16px;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(1rem);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 5px 10px -5px rgba(0, 0, 0, 0.04);
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 10000;
+  overflow: hidden;
+}
+
+#custom-chat.chat-visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+  visibility: visible;
+}
+
+/* Estilos de los mensajes */
+.message {
+  max-width: 80%;
+  padding: 0.75rem 1rem;
+  border-radius: 1rem;
+  margin-bottom: 0.5rem;
+  word-wrap: break-word;
+  animation: messageIn 0.3s ease forwards;
+}
+
+.message-user {
+  margin-left: auto;
+  background: linear-gradient(135deg, var(--color-primario) 0%, var(--color-secundario3) 100%);
+  color: white;
+  border-bottom-right-radius: 0.25rem;
+}
+
+.message-bot {
+  margin-right: auto;
+  background-color: #f3f4f6;
+  color: #1f2937;
+  border-bottom-left-radius: 0.25rem;
+}
+
+/* Área de mensajes - Scrollbar */
+#chat-messages {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(42, 134, 171, 0.5) transparent;
+}
+
+#chat-messages::-webkit-scrollbar {
+  width: 6px;
+}
+
+#chat-messages::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+#chat-messages::-webkit-scrollbar-thumb {
+  background-color: rgba(42, 134, 171, 0.5);
+  border-radius: 3px;
+}
+
+/* Animaciones */
+@keyframes messageIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Typing indicator */
+.typing-indicator {
+  display: flex;
+  gap: 4px;
+  padding: 0.5rem;
+  background: rgba(42, 134, 171, 0.1);
+  border-radius: 1rem;
+  width: fit-content;
+}
+
+.typing-indicator span {
+  width: 6px;
+  height: 6px;
+  background: var(--color-primario);
+  border-radius: 50%;
+  animation: typing 1s infinite ease-in-out;
+}
+
+.typing-indicator span:nth-child(2) { animation-delay: 0.2s; }
+.typing-indicator span:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes typing {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+}
+
+/* Utilidad para iconos blancos */
+.icon-white {
+  filter: brightness(0) invert(1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  #chat-cta {
+    right: 16px;
+    bottom: 16px;
+    width: 56px;
+    height: 56px;
+  }
+  
+  #custom-chat {
+    bottom: 85px;
+    right: 16px;
+    width: calc(100vw - 2rem);
+    height: calc(100vh - 12rem);
+  }
+}
